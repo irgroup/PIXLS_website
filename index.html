@@ -193,7 +193,7 @@
             </li>
             <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
               <span style="color: var(--color-primary); font-weight: bold;">✓</span>
-              <span><strong>Generative Multimodal Retrieval:</strong> Experimental evaluation of RAG systems (MIRAGES) showing that tables and context significantly improve answer reliability.</span>
+              <span><strong>Preprint RAG Demonstrator &amp; LIVIVO:</strong> The ZB MED team has built a usable RAG demonstrator connecting preprint intelligence with LIVIVO, while the CIR team at TH Köln focused on advancing deep multimodal information extraction.</span>
             </li>
           </ul>
         </div>
@@ -283,18 +283,18 @@
         <!-- Pillar 4 -->
         <div class="pillar-card">
           <div class="pillar-card-top dark-teal">
-            <span class="pillar-card-title">Synthetic IR &amp; RAG</span>
+            <span class="pillar-card-title">Synthetic IR &amp; RAG Demonstrator</span>
             <span class="pillar-step-code">AP 5</span>
           </div>
           <div class="pillar-card-body">
             <p>
-              Revitalizing test collections using LLMs/VLMs for synthetic relevance judgments, and evaluating multimodal RAG systems (MIRAGES) with parametric weighting between text passages and data tables.
+              Revitalizing test collections using LLMs/VLMs for synthetic relevance judgments, demonstrating the empirical impact of tables on scientific RAG, and engineering usable RAG demonstrators for Preprints and LIVIVO.
             </p>
             <ul class="pillar-features-list">
               <li>ACM SIGIR 2025 accepted framework</li>
               <li>TREC-COVID+ multimodal benchmark</li>
-              <li>MIRAGES experimental retrieval platform</li>
-              <li>Empirical proof of table impact on RAG</li>
+              <li>ZB MED RAG demonstrator for Preprints &amp; LIVIVO</li>
+              <li>CIR team focus on high-fidelity extraction</li>
             </ul>
           </div>
         </div>
@@ -407,14 +407,14 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
       <!-- Interactive Topic Filter -->
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All Contributions</button>
-        <button class="filter-btn" data-filter="multimodal">Multimodal Parsing &amp; Tables</button>
-        <button class="filter-btn" data-filter="synthetic">Synthetic Relevance &amp; Benchmarks</button>
-        <button class="filter-btn" data-filter="kg">Knowledge Graphs &amp; Embeddings</button>
+        <button class="filter-btn" data-filter="retrieval">Retrieval &amp; Extraction</button>
+        <button class="filter-btn" data-filter="simplicity">Text Readability &amp; Simplicity</button>
+        <button class="filter-btn" data-filter="kg">Knowledge &amp; Classification</button>
       </div>
 
       <div class="publications-list">
-        <!-- Paper 1: SIGIR 2025 REANIMATOR (Core PIXLS) -->
-        <article class="pub-card core-pixls" data-category="multimodal synthetic">
+        <!-- Paper 1: SIGIR 2025 REANIMATOR -->
+        <article class="pub-card core-pixls" data-category="retrieval">
           <div class="pub-meta-top">
             <span class="pub-badge sigir">ACM SIGIR 2025</span>
             <span class="pub-year">2025 • Padua, Italy</span>
@@ -427,7 +427,7 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
             Björn Engelmann, <strong>Fabian Haak</strong>, <strong>Philipp Schaer</strong>, Mani Erfanian Abdoust, Linus Netze, and Meik Bittkowski
           </p>
           <p class="pub-venue">
-            In Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25). DOI: 10.1145/3726302.3730342
+            In Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25). ACM, New York, NY, USA, 11 pages. DOI: 10.1145/3726302.3730342
           </p>
           <div class="pub-actions">
             <a href="https://arxiv.org/abs/2504.07584" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
@@ -453,12 +453,12 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
 }</div>
         </article>
 
-        <!-- Paper 2: Haak & Schaer 2026 (Hidden success factors / tables & figures) -->
-        <article class="pub-card core-pixls" data-category="multimodal">
+        <!-- Paper 2: SEASON 2026 Poster (Hidden Success Factors) -->
+        <article class="pub-card core-pixls" data-category="retrieval">
           <div class="pub-meta-top">
-            <span class="pub-badge pre">Research Article</span>
-            <span class="pub-year">2026</span>
-            <span class="monolith-label" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">Multimodal Analysis</span>
+            <span class="pub-badge" style="background-color: var(--color-gold-light); color: var(--color-gold-text); border: 1px solid var(--color-gold-border);">SEASON 2026 Poster</span>
+            <span class="pub-year">March 16–18, 2026 • Cologne, Germany</span>
+            <span class="monolith-label" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">Multimodal Structure</span>
           </div>
           <h3 class="pub-title">
             Revealing the Hidden Success Factors of Scientific Papers: The Case of Table and Figure References
@@ -467,94 +467,67 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
             <strong>Fabian Haak</strong> and <strong>Philipp Schaer</strong>
           </p>
           <p class="pub-venue">
-            Empirical investigation into multimodal scientific document structures, in-text referencing patterns, and their impact on information discovery and scholarly impact.
+            Poster presented at Search Engines and Society (SEASON 2026), Cologne, Germany.
           </p>
           <div class="pub-actions">
-            <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>Google Scholar Entry</span> &rarr;
+            <a href="https://searchenginesandsociety.net/season-2026/programme/" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>SEASON 2026 Programme</span> &rarr;
             </a>
-            <button class="pub-link-btn" onclick="toggleBibtex('bib-haak2026', this)" style="cursor: pointer; background: white;">
+            <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>Google Scholar</span>
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-season26', this)" style="cursor: pointer; background: white;">
               BibTeX
             </button>
           </div>
-          <div id="bib-haak2026" class="bibtex-box">@article{haak2026revealing,
+          <div id="bib-season26" class="bibtex-box">@inproceedings{haak2026revealing,
   author    = {Haak, Fabian and Schaer, Philipp},
-  title     = {Revealing the hidden success factors of scientific papers: the case of table and figure references},
-  year      = {2026}
+  title     = {Revealing the Hidden Success Factors of Scientific Papers: The Case of Table and Figure References},
+  booktitle = {Proceedings of the Conference on Search Engines and Society (SEASON 2026)},
+  year      = {2026},
+  address   = {Cologne, Germany},
+  url       = {https://searchenginesandsociety.net/season-2026/programme/}
 }</div>
         </article>
 
-        <!-- Paper 3: Keller et al. 2026 (Formalized Information Needs) -->
-        <article class="pub-card core-pixls" data-category="synthetic">
+        <!-- Paper 3: EMNLP 2024 Findings (ARTS) -->
+        <article class="pub-card related" data-category="simplicity">
           <div class="pub-meta-top">
-            <span class="pub-badge pre">Research Article</span>
-            <span class="pub-year">2026</span>
-            <span class="monolith-label berry" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">Synthetic Relevance</span>
+            <span class="pub-badge" style="background-color: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0;">EMNLP 2024 Findings</span>
+            <span class="pub-year">2024 • Miami, Florida, USA</span>
           </div>
           <h3 class="pub-title">
-            Formalized Information Needs Improve Large-Language-Model Relevance Judgments
+            ARTS: Assessing Readability &amp; Text Simplicity
           </h3>
           <p class="pub-authors">
-            Jan Keller, Maik Fröbe, Björn Engelmann, <strong>Fabian Haak</strong>, Timo Breuer, Birger Larsen, and <strong>Philipp Schaer</strong>
+            Björn Engelmann, Christoph K. Kreutz, <strong>Fabian Haak</strong>, and <strong>Philipp Schaer</strong>
           </p>
           <p class="pub-venue">
-            Investigation of structured prompt formulation and formalized criteria to enhance reliability and calibration of LLM-generated relevance labels in IR evaluation.
+            In Findings of the Association for Computational Linguistics: EMNLP 2024, pages 14925–14942, Miami, Florida, USA: Association for Computational Linguistics. DOI: 10.18653/v1/2024.findings-emnlp.877
           </p>
           <div class="pub-actions">
-            <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>Google Scholar Entry</span> &rarr;
+            <a href="https://doi.org/10.18653/v1/2024.findings-emnlp.877" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>ACL Anthology</span> &rarr;
             </a>
-            <button class="pub-link-btn" onclick="toggleBibtex('bib-keller2026', this)" style="cursor: pointer; background: white;">
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-arts24', this)" style="cursor: pointer; background: white;">
               BibTeX
             </button>
           </div>
-          <div id="bib-keller2026" class="bibtex-box">@article{keller2026formalized,
-  author    = {Keller, Jan and Fr{\"o}be, Maik and Engelmann, Bj{\"o}rn and Haak, Fabian and Breuer, Timo and Larsen, Birger and Schaer, Philipp},
-  title     = {Formalized Information Needs Improve Large-Language-Model Relevance Judgments},
-  year      = {2026}
-}</div>
-        </article>
-
-        <!-- Paper 4: Wolff et al. NSLP 2024 (Enriched BERT Embeddings) -->
-        <article class="pub-card related" data-category="kg">
-          <div class="pub-meta-top">
-            <span class="pub-badge nslp">NSLP 2024 / Springer</span>
-            <span class="pub-year">2024 • Cham, Switzerland</span>
-            <span class="monolith-label gold" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">AP 3 ZB MED KE</span>
-          </div>
-          <h3 class="pub-title">
-            Enriched BERT Embeddings for Scholarly Publication Classification
-          </h3>
-          <p class="pub-authors">
-            <strong>Benjamin Wolff</strong>, Eva Seidlmayer, and <strong>Konrad U. Förstner</strong>
-          </p>
-          <p class="pub-venue">
-            In International Workshop on Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024), Communications in Computer and Information Science, Springer Nature Switzerland, pp. 234–243. DOI: 10.1007/978-3-031-65794-8_16
-          </p>
-          <div class="pub-actions">
-            <a href="https://link.springer.com/chapter/10.1007/978-3-031-65794-8_16" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>Springer Link</span> &rarr;
-            </a>
-            <button class="pub-link-btn" onclick="toggleBibtex('bib-wolff2024', this)" style="cursor: pointer; background: white;">
-              BibTeX
-            </button>
-          </div>
-          <div id="bib-wolff2024" class="bibtex-box">@inproceedings{wolff2024enriched,
-  author    = {Wolff, Benjamin and Seidlmayer, Eva and F{\"o}rstner, Konrad U.},
-  title     = {Enriched BERT Embeddings for Scholarly Publication Classification},
-  booktitle = {Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024)},
-  pages     = {234--243},
+          <div id="bib-arts24" class="bibtex-box">@inproceedings{engelmann2024arts,
+  author    = {Engelmann, Bj{\"o}rn and Kreutz, Christoph K. and Haak, Fabian and Schaer, Philipp},
+  title     = {ARTS: Assessing Readability \& Text Simplicity},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages     = {14925--14942},
   year      = {2024},
-  publisher = {Springer Nature Switzerland},
-  doi       = {10.1007/978-3-031-65794-8_16}
+  doi       = {10.18653/v1/2024.findings-emnlp.877}
 }</div>
         </article>
 
-        <!-- Paper 5: Keller et al. TREC 2024 RAG -->
-        <article class="pub-card related" data-category="multimodal synthetic">
+        <!-- Paper 4: TREC 2024 RAG -->
+        <article class="pub-card related" data-category="retrieval">
           <div class="pub-meta-top">
             <span class="pub-badge trec">TREC 2024 Proceedings</span>
-            <span class="pub-year">2024 • NIST, Gaithersburg, USA</span>
+            <span class="pub-year">2024 • NIST, Gaithersburg, MD, USA</span>
           </div>
           <h3 class="pub-title">
             CIR at TREC 2024 RAG: Task 2 – Augmented Generation with Diversified Segments and Knowledge Adaption
@@ -580,6 +553,106 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
   series    = {NIST Special Publication 1329},
   year      = {2024},
   url       = {https://trec.nist.gov/pubs/trec33/papers/CIR.rag.pdf}
+}</div>
+        </article>
+
+        <!-- Paper 5: ACL 2024 Findings (BATS) -->
+        <article class="pub-card related" data-category="simplicity">
+          <div class="pub-meta-top">
+            <span class="pub-badge" style="background-color: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0;">ACL 2024 Findings</span>
+            <span class="pub-year">2024 • Bangkok, Thailand</span>
+          </div>
+          <h3 class="pub-title">
+            BATS: BenchmArking Text Simplicity 🦇
+          </h3>
+          <p class="pub-authors">
+            Christoph K. Kreutz, <strong>Fabian Haak</strong>, Björn Engelmann, and <strong>Philipp Schaer</strong>
+          </p>
+          <p class="pub-venue">
+            In Findings of the Association for Computational Linguistics: ACL 2024, pages 11968–11989, Bangkok, Thailand: Association for Computational Linguistics. DOI: 10.18653/v1/2024.findings-acl.712
+          </p>
+          <div class="pub-actions">
+            <a href="https://doi.org/10.18653/v1/2024.findings-acl.712" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>ACL Anthology</span> &rarr;
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-bats24', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-bats24" class="bibtex-box">@inproceedings{kreutz2024bats,
+  author    = {Kreutz, Christoph K. and Haak, Fabian and Engelmann, Bj{\"o}rn and Schaer, Philipp},
+  title     = {BATS: BenchmArking Text Simplicity},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
+  pages     = {11968--11989},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-acl.712}
+}</div>
+        </article>
+
+        <!-- Paper 6: Text Simplification Preprint 2023 -->
+        <article class="pub-card related" data-category="simplicity">
+          <div class="pub-meta-top">
+            <span class="pub-badge pre">Preprint</span>
+            <span class="pub-year">2023</span>
+          </div>
+          <h3 class="pub-title">
+            Text Simplification of Scientific Texts for Non-Expert Readers
+          </h3>
+          <p class="pub-authors">
+            Björn Engelmann, <strong>Fabian Haak</strong>, Christoph K. Kreutz, Nastaran Nikzad Khasmakhi, and <strong>Philipp Schaer</strong>
+          </p>
+          <p class="pub-venue">
+            Preprint available on arXiv:2307.03569 [cs.CL].
+          </p>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/abs/2307.03569" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>ArXiv Preprint</span> &rarr;
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-simpl23', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-simpl23" class="bibtex-box">@article{engelmann2023text,
+  author    = {Engelmann, Bj{\"o}rn and Haak, Fabian and Kreutz, Christoph K. and Khasmakhi, Nastaran Nikzad and Schaer, Philipp},
+  title     = {Text Simplification of Scientific Texts for Non-Expert Readers},
+  journal   = {arXiv preprint arXiv:2307.03569},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2307.03569}
+}</div>
+        </article>
+
+        <!-- Paper 7: Wolff et al. NSLP 2024 -->
+        <article class="pub-card related" data-category="kg">
+          <div class="pub-meta-top">
+            <span class="pub-badge nslp">NSLP 2024 / Springer</span>
+            <span class="pub-year">2024 • Cham, Switzerland</span>
+            <span class="monolith-label gold" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">AP 3 ZB MED KE</span>
+          </div>
+          <h3 class="pub-title">
+            Enriched BERT Embeddings for Scholarly Publication Classification
+          </h3>
+          <p class="pub-authors">
+            <strong>Benjamin Wolff</strong>, Eva Seidlmayer, and <strong>Konrad U. Förstner</strong>
+          </p>
+          <p class="pub-venue">
+            In International Workshop on Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024), Communications in Computer and Information Science, Springer Nature Switzerland, pages 234–243. DOI: 10.1007/978-3-031-65794-8_16
+          </p>
+          <div class="pub-actions">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-65794-8_16" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>Springer Link</span> &rarr;
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-wolff2024', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-wolff2024" class="bibtex-box">@inproceedings{wolff2024enriched,
+  author    = {Wolff, Benjamin and Seidlmayer, Eva and F{\"o}rstner, Konrad U.},
+  title     = {Enriched BERT Embeddings for Scholarly Publication Classification},
+  booktitle = {Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024)},
+  pages     = {234--243},
+  year      = {2024},
+  publisher = {Springer Nature Switzerland},
+  doi       = {10.1007/978-3-031-65794-8_16}
 }</div>
         </article>
       </div>
@@ -719,26 +792,29 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
       </div>
 
       <div class="team-grid">
-        <!-- Partner 1: TH Köln -->
+        <!-- Partner 1: TH Köln (CIR) -->
         <div class="institute-card">
           <div class="inst-header th-koeln">
             <div>
               <h3 class="inst-title">TH Köln</h3>
-              <p class="inst-subtitle">Information Retrieval Research Group (IRgroup)</p>
+              <p class="inst-subtitle">Cologne Information Retrieval Group (CIR)</p>
             </div>
             <img src="assets/img/th-koeln-emblem.svg" alt="TH Köln Emblem" style="height: 38px; width: auto; background: white; padding: 2px 6px; border-radius: 4px;">
           </div>
           <div class="inst-body">
+            <!-- Team Website Link -->
+            <div style="background: var(--color-surface-subtle); padding: 0.65rem 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle); display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--color-text-main);">Team Website:</span>
+              <a href="https://ir.web.th-koeln.de/" target="_blank" rel="noopener noreferrer" class="link-tag" style="font-weight: 700;">ir.web.th-koeln.de &rarr;</a>
+            </div>
+
             <!-- Philipp Schaer -->
             <div class="person-profile">
               <h4 class="person-name">Prof. Dr. Philipp Schaer</h4>
               <p class="person-title">Principal Investigator (Project Lead)</p>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
-                Professor of Information Retrieval at the Faculty of Information Science and Communication Studies. Research focuses on information extraction for retrieval purposes, value-added digital library services, and synthetic evaluation.
-              </p>
               <div class="person-links">
-                <a href="mailto:philipp.schaer@th-koeln.de" class="link-tag">Email</a>
-                <a href="https://ir.web.th-koeln.de/" target="_blank" rel="noopener noreferrer" class="link-tag">IRgroup Site</a>
+                <a href="https://scholar.google.com/citations?user=XTjmqCwAAAAJ" target="_blank" rel="noopener noreferrer" class="link-tag">Google Scholar</a>
+                <a href="https://orcid.org/0000-0002-8817-4632" target="_blank" rel="noopener noreferrer" class="link-tag">ORCID: 0000-0002-8817-4632</a>
               </div>
             </div>
 
@@ -746,13 +822,9 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
             <div class="person-profile">
               <h4 class="person-name">Fabian Haak, M.Sc.</h4>
               <p class="person-title">Research Associate &amp; Doctoral Researcher</p>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
-                Researcher at TH Köln focusing on multimodal document parsing, Vision-Language Model architectures for scientific literature, table extraction, and <code>reanimator-vlm</code>.
-              </p>
               <div class="person-links">
-                <a href="mailto:fabian.haak@th-koeln.de" class="link-tag">Email</a>
                 <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="link-tag">Google Scholar</a>
-                <a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer" class="link-tag">GitHub</a>
+                <a href="https://orcid.org/0000-0002-3392-7860" target="_blank" rel="noopener noreferrer" class="link-tag">ORCID: 0000-0002-3392-7860</a>
               </div>
             </div>
           </div>
@@ -768,16 +840,19 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
             <img src="assets/img/zbmed-emblem.svg" alt="ZB MED Emblem" style="height: 38px; width: auto; background: white; padding: 2px 6px; border-radius: 4px;">
           </div>
           <div class="inst-body">
+            <!-- Team Website Link -->
+            <div style="background: var(--color-surface-subtle); padding: 0.65rem 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle); display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--color-text-main);">Team Website:</span>
+              <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer" class="link-tag" style="font-weight: 700;">zbmed.de &rarr;</a>
+            </div>
+
             <!-- Konrad Förstner -->
             <div class="person-profile">
               <h4 class="person-name">Prof. Dr. Konrad U. Förstner</h4>
               <p class="person-title">Principal Investigator (Project Lead)</p>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
-                Head of Data Science &amp; Services at ZB MED and Professor of Information &amp; Data Literacy at TH Köln. Expertise in biomedical knowledge graphs, open research infrastructures, and data science in the life sciences.
-              </p>
               <div class="person-links">
-                <a href="mailto:foerstner@zbmed.de" class="link-tag">Email</a>
-                <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer" class="link-tag">ZB MED Portal</a>
+                <a href="https://scholar.google.com/citations?user=n-GoW_IAAAAJ" target="_blank" rel="noopener noreferrer" class="link-tag">Google Scholar</a>
+                <a href="https://orcid.org/0000-0002-1481-2996" target="_blank" rel="noopener noreferrer" class="link-tag">ORCID: 0000-0002-1481-2996</a>
               </div>
             </div>
 
@@ -785,12 +860,9 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
             <div class="person-profile">
               <h4 class="person-name">Benjamin Wolff, M.Sc.</h4>
               <p class="person-title">Research Associate</p>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
-                Researcher at ZB MED leading data acquisition pipelines across preprint repositories, Knowledge Environment (KE) integration, and semantically enriched BERT embeddings.
-              </p>
               <div class="person-links">
                 <a href="https://scholar.google.com/citations?hl=en&user=CqeS0DQAAAAJ" target="_blank" rel="noopener noreferrer" class="link-tag">Google Scholar</a>
-                <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer" class="link-tag">ZB MED Profile</a>
+                <a href="https://orcid.org/0000-0001-9345-8958" target="_blank" rel="noopener noreferrer" class="link-tag">ORCID: 0000-0001-9345-8958</a>
               </div>
             </div>
           </div>
@@ -905,3 +977,4 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+

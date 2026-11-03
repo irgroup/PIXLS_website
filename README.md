@@ -20,7 +20,7 @@ Preprint servers have become vital in modern life sciences communication, offeri
 1. **Continuous Data Acquisition:** Automated ELT ingestion of 530,000+ preprints across bioRxiv, medRxiv, and 30+ OSF servers.
 2. **Multimodal Information Extraction:** Vision-Language Models (VLMs) and Docling-powered parsing of tables, figures, captions, and contextually linked text passages.
 3. **Synthetic Relevance Benchmarking:** Revitalizing legacy test collections (TREC-COVID+) with automated, reproducible relevance assessments via LLMs (UMBRELA framework).
-4. **Knowledge Integration & RAG:** Integration into the ZB MED Knowledge Environment (KE), enriched semantic BERT embeddings, and multimodal Retrieval-Augmented Generation (MIRAGES).
+4. **Knowledge Integration & RAG:** Integration into the ZB MED Knowledge Environment (KE), enriched semantic BERT embeddings, and a dedicated RAG demonstrator developed by ZB MED for Preprints and LIVIVO.
 
 ---
 
@@ -69,3 +69,4 @@ To host this repository on GitHub Pages (`https://irgroup.github.io/PIXLS_websit
 
 - Web content and documentation: [Creative Commons Attribution 4.0 International (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - Source code and scripts: [MIT License](https://opensource.org/licenses/MIT)
+

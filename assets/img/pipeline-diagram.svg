@@ -98,7 +98,7 @@
   <!-- Arrow 3 -> 4 -->
   <line x1="720" y1="165" x2="746" y2="165" class="flow-arrow" marker-end="url(#arrow-gold)" />
 
-  <!-- Stage 4: Integration & Multimodal RAG / MIRAGES -->
+  <!-- Stage 4: Knowledge Integration & RAG Demonstrator -->
   <g transform="translate(750, 20)">
     <rect x="0" y="0" width="310" height="290" rx="8" fill="#edf7f6" stroke="#c2e2e1" stroke-width="1.5" />
     <!-- Monolithic Header -->
@@ -106,8 +106,8 @@
     <rect x="0" y="30" width="310" height="8" fill="#388786" />
     <text x="14" y="24" class="mono-title">04 / Knowledge Integration &amp; RAG</text>
 
-    <text x="14" y="65" class="box-desc" font-weight="700" fill="#1b4544">ZB MED KE &amp; MIRAGES Platform</text>
-    <text x="14" y="85" class="box-desc">Homogenization in ZB MED Knowledge Environment, semantically enriched embeddings, and multimodal generative retrieval.</text>
+    <text x="14" y="65" class="box-desc" font-weight="700" fill="#1b4544">ZB MED KE &amp; RAG Demonstrator</text>
+    <text x="14" y="85" class="box-desc">Homogenization in ZB MED Knowledge Environment, semantically enriched embeddings, and a usable RAG demonstrator for preprints &amp; LIVIVO.</text>
 
     <rect x="14" y="130" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
     <text x="22" y="147" class="tech-pill" fill="#388786">ZB MED KE Knowledge Graph &amp; APIs</text>
@@ -116,11 +116,12 @@
     <text x="22" y="182" class="tech-pill" fill="#388786">Enriched BERT Embeddings (NSLP '24)</text>
 
     <rect x="14" y="200" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
-    <text x="22" y="217" class="tech-pill" fill="#388786">MIRAGES Multimodal RAG &amp; LIVIVO Prep</text>
+    <text x="22" y="217" class="tech-pill" fill="#388786">ZB MED RAG Demonstrator &amp; LIVIVO</text>
 
     <rect x="14" y="235" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
     <text x="22" y="252" class="tech-pill" fill="#873774">FAIR Data &amp; Open Science Releases</text>
 
-    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">Work Packages 3 &amp; 4 (ZB MED / TH Köln)</text>
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">Work Packages 3 &amp; 4 (ZB MED / CIR TH Köln)</text>
   </g>
 </svg>
+
