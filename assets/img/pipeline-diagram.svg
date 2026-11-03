@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 340" fill="none" role="img" aria-label="PIXLS System Architecture Diagram">
+  <defs>
+    <style>
+      .mono-title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; fill: #ffffff; text-transform: uppercase; }
+      .step-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; fill: #ffffff; }
+      .box-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; fill: #2c3837; line-height: 1.4; }
+      .tech-pill { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; }
+      .flow-arrow { stroke: #388786; stroke-width: 2.5; stroke-dasharray: 4 3; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#388786"/>
+    </marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#877A37"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 1: Ingestion -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="190" height="290" rx="8" fill="#edf7f6" stroke="#c2e2e1" stroke-width="1.5" />
+    <!-- Monolithic Header -->
+    <rect x="0" y="0" width="190" height="38" rx="8" fill="#388786" />
+    <rect x="0" y="30" width="190" height="8" fill="#388786" />
+    <text x="14" y="24" class="mono-title">01 / Acquisition</text>
+    
+    <text x="14" y="65" class="box-desc" font-weight="700" fill="#1b4544">530,000+ Preprints</text>
+    <text x="14" y="85" class="box-desc">Automated ingestion from 30+ servers: bioRxiv, medRxiv, OSF, PsyArXiv, etc.</text>
+    
+    <!-- Feature tags -->
+    <rect x="14" y="145" width="162" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
+    <text x="24" y="162" class="tech-pill" fill="#388786">Asynchronous ELT</text>
+    
+    <rect x="14" y="180" width="162" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
+    <text x="24" y="197" class="tech-pill" fill="#388786">Leaky-Bucket Limiting</text>
+
+    <rect x="14" y="215" width="162" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
+    <text x="24" y="232" class="tech-pill" fill="#388786">Continuous REST APIs</text>
+    
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">Work Package 1 (ZB MED)</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="210" y1="165" x2="236" y2="165" class="flow-arrow" marker-end="url(#arrow)" />
+
+  <!-- Stage 2: Multimodal Extraction -->
+  <g transform="translate(240, 20)">
+    <rect x="0" y="0" width="230" height="290" rx="8" fill="#f9edf6" stroke="#e3bcdb" stroke-width="1.5" />
+    <!-- Monolithic Header -->
+    <rect x="0" y="0" width="230" height="38" rx="8" fill="#873774" />
+    <rect x="0" y="30" width="230" height="8" fill="#873774" />
+    <text x="14" y="24" class="mono-title">02 / Multimodal VLM</text>
+
+    <text x="14" y="65" class="box-desc" font-weight="700" fill="#611d51">REANIMATOR-VLM</text>
+    <text x="14" y="85" class="box-desc">Deep PDF parsing using Vision-Language Models &amp; Docling, bypassing rigid legacy rule systems.</text>
+
+    <!-- Sub-elements -->
+    <rect x="14" y="130" width="202" height="24" rx="4" fill="#ffffff" stroke="#e3bcdb" />
+    <text x="22" y="146" class="tech-pill" fill="#873774">● Tables &amp; Markdown structures</text>
+
+    <rect x="14" y="160" width="202" height="24" rx="4" fill="#ffffff" stroke="#e3bcdb" />
+    <text x="22" y="176" class="tech-pill" fill="#873774">● Figures &amp; High-res Captions</text>
+
+    <rect x="14" y="190" width="202" height="24" rx="4" fill="#ffffff" stroke="#e3bcdb" />
+    <text x="22" y="206" class="tech-pill" fill="#873774">● In-Text Context Cross-linking</text>
+
+    <rect x="14" y="220" width="202" height="24" rx="4" fill="#ffffff" stroke="#e3bcdb" />
+    <text x="22" y="236" class="tech-pill" fill="#873774">● dots.mocr / dots.ocr Powered</text>
+
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#7a426f">Work Package 2 (TH Köln)</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="470" y1="165" x2="496" y2="165" class="flow-arrow" marker-end="url(#arrow)" />
+
+  <!-- Stage 3: Synthetic Relevance & Test Collections -->
+  <g transform="translate(500, 20)">
+    <rect x="0" y="0" width="220" height="290" rx="8" fill="#f9f7ed" stroke="#e4dec0" stroke-width="1.5" />
+    <!-- Monolithic Header -->
+    <rect x="0" y="0" width="220" height="38" rx="8" fill="#877A37" />
+    <rect x="0" y="30" width="220" height="8" fill="#877A37" />
+    <text x="14" y="24" class="mono-title">03 / Synthetic IR</text>
+
+    <text x="14" y="65" class="box-desc" font-weight="700" fill="#524818">Revitalized Collections</text>
+    <text x="14" y="85" class="box-desc">Automated, reproducible relevance assessment using LLMs (UMBRELA framework) validated against expert annotations.</text>
+
+    <rect x="14" y="145" width="192" height="26" rx="4" fill="#ffffff" stroke="#e4dec0" />
+    <text x="22" y="162" class="tech-pill" fill="#877A37">TREC-COVID+ Benchmark</text>
+
+    <rect x="14" y="180" width="192" height="26" rx="4" fill="#ffffff" stroke="#e4dec0" />
+    <text x="22" y="197" class="tech-pill" fill="#877A37">Multimodal Relevance Labels</text>
+
+    <rect x="14" y="215" width="192" height="26" rx="4" fill="#ffffff" stroke="#e4dec0" />
+    <text x="22" y="232" class="tech-pill" fill="#877A37">SIGIR '25 Methodology</text>
+
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#756b35">Work Package 5 (TH Köln)</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="720" y1="165" x2="746" y2="165" class="flow-arrow" marker-end="url(#arrow-gold)" />
+
+  <!-- Stage 4: Integration & Multimodal RAG / MIRAGES -->
+  <g transform="translate(750, 20)">
+    <rect x="0" y="0" width="310" height="290" rx="8" fill="#edf7f6" stroke="#c2e2e1" stroke-width="1.5" />
+    <!-- Monolithic Header -->
+    <rect x="0" y="0" width="310" height="38" rx="8" fill="#388786" />
+    <rect x="0" y="30" width="310" height="8" fill="#388786" />
+    <text x="14" y="24" class="mono-title">04 / Knowledge Integration &amp; RAG</text>
+
+    <text x="14" y="65" class="box-desc" font-weight="700" fill="#1b4544">ZB MED KE &amp; MIRAGES Platform</text>
+    <text x="14" y="85" class="box-desc">Homogenization in ZB MED Knowledge Environment, semantically enriched embeddings, and multimodal generative retrieval.</text>
+
+    <rect x="14" y="130" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
+    <text x="22" y="147" class="tech-pill" fill="#388786">ZB MED KE Knowledge Graph &amp; APIs</text>
+
+    <rect x="14" y="165" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
+    <text x="22" y="182" class="tech-pill" fill="#388786">Enriched BERT Embeddings (NSLP '24)</text>
+
+    <rect x="14" y="200" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
+    <text x="22" y="217" class="tech-pill" fill="#388786">MIRAGES Multimodal RAG &amp; LIVIVO Prep</text>
+
+    <rect x="14" y="235" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
+    <text x="22" y="252" class="tech-pill" fill="#873774">FAIR Data &amp; Open Science Releases</text>
+
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">Work Packages 3 &amp; 4 (ZB MED / TH Köln)</text>
+  </g>
+</svg>

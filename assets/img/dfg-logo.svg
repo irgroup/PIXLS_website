@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" fill="none" role="img" aria-label="DFG Gefördert durch Deutsche Forschungsgemeinschaft">
+  <rect width="240" height="64" rx="4" fill="#ffffff" stroke="#c2e2e1" stroke-width="1.5" />
+  <rect x="0" y="0" width="8" height="64" rx="2" fill="#388786" />
+  <!-- DFG Monogram in Deep Blue/Teal -->
+  <text x="24" y="38" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="800" font-size="26" fill="#1b4544" letter-spacing="-0.5">DFG</text>
+  <line x1="88" y1="12" x2="88" y2="52" stroke="#c2e2e1" stroke-width="1.5" />
+  <text x="100" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="10.5" fill="#2c3837" letter-spacing="0.3">Gefördert durch die</text>
+  <text x="100" y="41" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11" fill="#388786">Deutsche</text>
+  <text x="100" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11" fill="#388786">Forschungsgemeinschaft</text>
+</svg>

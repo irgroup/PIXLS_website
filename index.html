@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIXLS | Preprint Information eXtraction for Life Sciences</title>
+  <meta name="description" content="PIXLS is a DFG-funded research project by TH Köln and ZB MED bringing multimodal information extraction, vision-language models, and synthetic relevance assessment to life science preprints.">
+  <meta name="keywords" content="PIXLS, DFG, Preprint, Information Extraction, Life Sciences, REANIMATOR, VLM, RAG, Multimodal Retrieval, TH Köln, ZB MED">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="PIXLS | Preprint Information eXtraction for Life Sciences">
+  <meta property="og:description" content="DFG-funded project developing multimodal document parsing, synthetic relevance assessment, and generative retrieval for 530,000+ preprints.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://irgroup.github.io/PIXLS_website/">
+
+  <!-- Google Fonts: Space Grotesk (Brand & Monolithic Headings), Inter (Body), JetBrains Mono (Code/Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/pixls-brandmark.svg">
+</head>
+<body id="top">
+
+  <!-- =======================================================================
+       STICKY NAVBAR
+       ======================================================================= -->
+  <nav class="site-navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-wrapper">
+      <a href="#top" class="nav-brand" aria-label="PIXLS Home">
+        <img src="assets/img/pixls-brandmark.svg" alt="PIXLS Project Logo" class="nav-brand-mark">
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#pillars" class="nav-link">Research</a></li>
+        <li><a href="#tools" class="nav-link">Software &amp; Tools</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#workshop" class="nav-link">ISI 2027 Workshop</a></li>
+        <li><a href="#team" class="nav-link">Team &amp; Partners</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer" class="btn-pill" title="View REANIMATOR-VLM on GitHub">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =======================================================================
+       HERO SECTION
+       ======================================================================= -->
+  <header class="hero-section" id="hero">
+    <div class="container hero-content">
+      <div class="hero-text-col">
+        <div class="hero-eyebrow">
+          <span class="tag-dfg">DFG Project 492813820</span>
+          <span class="tag-period">2023 – 2026</span>
+          <span class="monolith-label berry">Life Sciences IR</span>
+        </div>
+
+        <h1 class="hero-title">
+          Unlocking <span class="highlight-teal">Preprint Knowledge</span> with Multimodal AI
+        </h1>
+
+        <p class="hero-subtitle">
+          <strong>PIXLS</strong> (<em>Preprint Information eXtraction for Life Sciences</em>) is an interdisciplinary research project by <strong>TH Köln</strong> and <strong>ZB MED</strong>. We bridge the gap between rapidly expanding preprint archives and deep machine readability through large-scale acquisition, Vision-Language Model extraction, synthetic relevance benchmarking, and multimodal RAG.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#tools" class="btn-solid-monolith">
+            <span>Explore REANIMATOR-VLM</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="#workshop" class="btn-solid-monolith berry">
+            <span>ISI 2027 Workshop CFP</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="#publications" class="btn-pill">View Publications</a>
+        </div>
+
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <span class="metric-num">530,000+</span>
+            <span class="metric-desc">Preprints continuously acquired across 30+ servers</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-num gold">SIGIR '25</span>
+            <span class="metric-desc">REANIMATOR framework published at premier IR venue</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-num berry">Multimodal</span>
+            <span class="metric-desc">Deep parsing of tables, figures, captions &amp; text</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Feature Card Stack -->
+      <div class="hero-card-stack">
+        <div class="hero-box highlight-box">
+          <div class="hero-box-header">
+            <span class="monolith-label">Core Mission</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-primary);">AP 1 – AP 5</span>
+          </div>
+          <h2 class="hero-box-title">From Unstructured PDFs to Actionable Science</h2>
+          <p>
+            Life science preprints provide urgent research insights long before formal peer review. PIXLS liberates critical knowledge buried inside PDF tables, formulas, and diagrams, making it FAIR and semantically searchable for researchers worldwide.
+          </p>
+        </div>
+
+        <div class="hero-box reanimator-box">
+          <div class="hero-box-header">
+            <span class="monolith-label berry">Featured Release</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-berry);">v0.1.2 on PyPI</span>
+          </div>
+          <h2 class="hero-box-title">REANIMATOR-VLM</h2>
+          <p>
+            Our completely rebuilt document parsing toolkit powered by Vision-Language Models (dots.mocr) for multi-modal element extraction and domain-independent synthetic relevance assessment.
+          </p>
+          <div style="margin-top: 0.85rem;">
+            <a href="https://pypi.org/project/reanimator-vlm/" target="_blank" rel="noopener noreferrer" class="pub-link-btn" style="background: white; border-color: var(--color-berry-border); color: var(--color-berry);">
+              View on PyPI &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-box" style="background: var(--color-gold-light); border-color: var(--color-gold-border); border-left: 5px solid var(--color-gold);">
+          <div class="hero-box-header">
+            <span class="monolith-label gold">Community</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-gold);">ISI 2027</span>
+          </div>
+          <h2 class="hero-box-title">Information Extraction in Practice</h2>
+          <p>
+            Upcoming workshop co-organized with ZBW and GESIS at the International Symposium of Information Science in Hamburg.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       ABOUT / SCOPE & MOTIVATION SECTION
+       ======================================================================= -->
+  <section id="about">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header">The PIXLS Project &amp; Scope</h2>
+        <p class="section-lead">
+          Preprint servers have transformed scientific communication in the life sciences, enabling immediate dissemination of groundbreaking results. However, traditional digital library systems struggle to index the rich multimodality of preprints.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3.5rem;">
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.75rem;">
+            The Challenge: Dark Data in Scientific PDFs
+          </h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 1rem; line-height: 1.7;">
+            Scientific literature in biomedicine is inherently multimodal: the most essential experimental data, dosage tables, statistical results, and molecular observations are embedded within tables, figures, and visual layouts. Standard full-text search engines treat PDFs as flat strings of text, completely losing structural context and rendering tables and figures invisible to retrieval algorithms.
+          </p>
+          <p style="color: var(--color-text-muted); line-height: 1.7;">
+            Furthermore, evaluating retrieval systems on new tasks requires costly human relevance judgments. Test collections age quickly, failing to reflect modern user requirements such as complex question-answering and Retrieval-Augmented Generation (RAG).
+          </p>
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--color-berry); margin-bottom: 0.75rem;">
+            The PIXLS Solution: Multimodal AI &amp; Open Science
+          </h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 1rem; line-height: 1.7;">
+            Funded by the Deutsche Forschungsgemeinschaft (DFG) in the LIS program (<em>Wissenschaftliche Literaturversorgungs- und Informationssysteme</em>), PIXLS tackles both dimensions:
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; color: var(--color-text-main); font-size: 0.95rem;">
+            <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+              <span style="color: var(--color-primary); font-weight: bold;">✓</span>
+              <span><strong>Automated Ingestion Pipeline:</strong> Continuous harvesting of 530,000+ preprints from bioRxiv, medRxiv, and 30+ OSF archives.</span>
+            </li>
+            <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+              <span style="color: var(--color-berry); font-weight: bold;">✓</span>
+              <span><strong>Vision-Language Parsing:</strong> Moving beyond brittle legacy rule-based tools to Docling and modern Vision-Language Models (dots.mocr) with <code>reanimator-vlm</code>.</span>
+            </li>
+            <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+              <span style="color: var(--color-gold); font-weight: bold;">✓</span>
+              <span><strong>Synthetic Relevance Benchmarks:</strong> Generating validated multi-modal relevance labels using LLMs (UMBRELA framework) to revive legacy test collections (TREC-COVID+).</span>
+            </li>
+            <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+              <span style="color: var(--color-primary); font-weight: bold;">✓</span>
+              <span><strong>Generative Multimodal Retrieval:</strong> Experimental evaluation of RAG systems (MIRAGES) showing that tables and context significantly improve answer reliability.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Architecture Flow Diagram Display -->
+      <div class="diagram-wrapper">
+        <h3 class="monolith-header berry" style="font-size: 1.15rem; margin-bottom: 1.25rem;">End-to-End System Architecture</h3>
+        <img src="assets/img/pipeline-diagram.svg" alt="PIXLS System Architecture: Acquisition, Multimodal Extraction, Synthetic IR, and Knowledge Integration" style="width: 100%;">
+        <p class="diagram-caption">
+          Figure 1: Modular data flow from multi-source preprint harvesting (AP 1) through VLM parsing (AP 2) and synthetic test collection revitalization (AP 5) to ZB MED Knowledge Environment integration (AP 3/4).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       RESEARCH PILLARS SECTION
+       ======================================================================= -->
+  <section class="section-alt" id="pillars">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header gold">Research Pillars &amp; Work Packages</h2>
+        <p class="section-lead">
+          PIXLS structures its innovations across five coordinated work packages executed jointly by TH Köln and ZB MED.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-card-top teal">
+            <span class="pillar-card-title">Data Acquisition</span>
+            <span class="pillar-step-code">AP 1</span>
+          </div>
+          <div class="pillar-card-body">
+            <p>
+              An asynchronous, fault-tolerant ELT pipeline that continuously harvests preprints and structured metadata from over 30 international repositories using REST APIs with leaky-bucket rate limiting.
+            </p>
+            <ul class="pillar-features-list">
+              <li>530,000+ life science preprints</li>
+              <li>bioRxiv, medRxiv, and 30+ OSF servers</li>
+              <li>Staging area &amp; automated test suite</li>
+              <li>ZB MED infrastructure service</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card berry">
+          <div class="pillar-card-top berry">
+            <span class="pillar-card-title">Multimodal Extraction</span>
+            <span class="pillar-step-code">AP 2</span>
+          </div>
+          <div class="pillar-card-body">
+            <p>
+              Deep multimodal document parsing of scientific PDFs using Docling and modern Vision-Language Models (VLMs), extracting structured text, machine-readable tables, figures, captions, and in-text references.
+            </p>
+            <ul class="pillar-features-list">
+              <li>Powered by <code>reanimator-vlm</code></li>
+              <li>In-text reference contextualization</li>
+              <li>Structured relational storage</li>
+              <li>Independence from closed LLM APIs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card gold">
+          <div class="pillar-card-top gold">
+            <span class="pillar-card-title">Knowledge Integration</span>
+            <span class="pillar-step-code">AP 3 &amp; 4</span>
+          </div>
+          <div class="pillar-card-body">
+            <p>
+              Homogenization and persistent enrichment of preprint metadata in the ZB MED Knowledge Environment (KE), combined with semantically enriched BERT embeddings for publication classification.
+            </p>
+            <ul class="pillar-features-list">
+              <li>ZB MED Knowledge Environment (KE)</li>
+              <li>Enriched embeddings (NSLP 2024)</li>
+              <li>LIVIVO discovery preparation</li>
+              <li>FAIR metadata exposure via REST APIs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-card-top dark-teal">
+            <span class="pillar-card-title">Synthetic IR &amp; RAG</span>
+            <span class="pillar-step-code">AP 5</span>
+          </div>
+          <div class="pillar-card-body">
+            <p>
+              Revitalizing test collections using LLMs/VLMs for synthetic relevance judgments, and evaluating multimodal RAG systems (MIRAGES) with parametric weighting between text passages and data tables.
+            </p>
+            <ul class="pillar-features-list">
+              <li>ACM SIGIR 2025 accepted framework</li>
+              <li>TREC-COVID+ multimodal benchmark</li>
+              <li>MIRAGES experimental retrieval platform</li>
+              <li>Empirical proof of table impact on RAG</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SOFTWARE & TOOLS SPOTLIGHT (REANIMATOR-VLM)
+       ======================================================================= -->
+  <section id="tools">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header berry">Software &amp; Open Source Tools</h2>
+        <p class="section-lead">
+          PIXLS embraces Open Science. Our primary software release, <strong>REANIMATOR-VLM</strong>, is openly distributed on PyPI and GitHub with comprehensive documentation.
+        </p>
+      </div>
+
+      <div class="software-spotlight">
+        <div class="software-spotlight-content">
+          <span class="monolith-label berry">Featured Toolkit</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin: 0.5rem 0 1rem; color: var(--color-text-main);">
+            reanimator-vlm
+          </h3>
+          <p style="color: var(--color-text-muted); line-height: 1.65; margin-bottom: 1.25rem;">
+            A clean rebuild of REANIMATOR using vision-language models (such as <code>dots.mocr</code>) for document collection processing, structured multimodal element parsing (tables, figures, formulas, text), and domain-independent synthetic relevance assessment via the UMBRELA framework.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="background: var(--color-surface-subtle); padding: 0.85rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-primary);">
+              <strong style="display: block; font-size: 0.88rem; color: var(--color-primary-text);">VLM-Powered Extraction</strong>
+              <span style="font-size: 0.82rem; color: var(--color-text-muted);">High-precision optical recognition of tables, visual elements, and formulas.</span>
+            </div>
+            <div style="background: var(--color-surface-subtle); padding: 0.85rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-berry);">
+              <strong style="display: block; font-size: 0.88rem; color: var(--color-berry-text);">Synthetic Judgments</strong>
+              <span style="font-size: 0.82rem; color: var(--color-text-muted);">Automated, reproducible multi-grade relevance labeling for RAG evaluation.</span>
+            </div>
+          </div>
+
+          <div class="software-links">
+            <a href="https://pypi.org/project/reanimator-vlm/" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith berry" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+              PyPI Package &rarr;
+            </a>
+            <a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+              GitHub Repository
+            </a>
+            <a href="https://irgroup.github.io/reanimator-vlm/" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+              Technical Docs
+            </a>
+          </div>
+        </div>
+
+        <div class="software-spotlight-code">
+          <div>
+            <div class="code-header-bar">
+              <span class="code-title">Python Quickstart</span>
+              <button class="copy-btn" onclick="copySnippet('codeSnippet', this)">Copy Code</button>
+            </div>
+            <div class="code-body">
+<pre id="codeSnippet"><span style="color: #ff7b72;">from</span> reanimator <span style="color: #ff7b72;">import</span> (
+    DocumentCollection,
+    MultimodalParser,
+    SyntheticAssessor
+)
+
+<span style="color: #8b949e;"># 1. Load collection of preprint PDFs</span>
+collection = DocumentCollection.from_folder(<span style="color: #a5d6ff;">"./preprints"</span>)
+
+<span style="color: #8b949e;"># 2. Parse multimodal components with VLM</span>
+parser = MultimodalParser(model=<span style="color: #a5d6ff;">"dots.mocr"</span>)
+parsed_docs = parser.parse(
+    collection,
+    extract_tables=<span style="color: #79c0ff;">True</span>,
+    link_contexts=<span style="color: #79c0ff;">True</span>
+)
+
+<span style="color: #8b949e;"># 3. Generate synthetic relevance for RAG</span>
+assessor = SyntheticAssessor(framework=<span style="color: #a5d6ff;">"umbrela"</span>)
+judgments = assessor.evaluate_relevance(
+    query=<span style="color: #a5d6ff;">"remdesivir clinical efficacy"</span>,
+    elements=parsed_docs.get_tables_and_passages()
+)
+
+print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span style="color: #a5d6ff;"> labeled pairs."</span>)</pre>
+            </div>
+          </div>
+
+          <div class="install-callout">
+            <span class="install-command" id="pipInstallText">pip install reanimator-vlm</span>
+            <button class="copy-btn" onclick="copySnippet('pipInstallText', this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       PUBLICATIONS & DISSEMINATION SECTION
+       ======================================================================= -->
+  <section class="section-alt" id="publications">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header">Publications &amp; Dissemination</h2>
+        <p class="section-lead">
+          Peer-reviewed articles, conference proceedings, and benchmarks directly originating from or closely aligned with the PIXLS project scope.
+        </p>
+      </div>
+
+      <!-- Interactive Topic Filter -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Contributions</button>
+        <button class="filter-btn" data-filter="multimodal">Multimodal Parsing &amp; Tables</button>
+        <button class="filter-btn" data-filter="synthetic">Synthetic Relevance &amp; Benchmarks</button>
+        <button class="filter-btn" data-filter="kg">Knowledge Graphs &amp; Embeddings</button>
+      </div>
+
+      <div class="publications-list">
+        <!-- Paper 1: SIGIR 2025 REANIMATOR (Core PIXLS) -->
+        <article class="pub-card core-pixls" data-category="multimodal synthetic">
+          <div class="pub-meta-top">
+            <span class="pub-badge sigir">ACM SIGIR 2025</span>
+            <span class="pub-year">2025 • Padua, Italy</span>
+            <span class="monolith-label berry" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">Core PIXLS Framework</span>
+          </div>
+          <h3 class="pub-title">
+            REANIMATOR: Reanimate Retrieval Test Collections with Extracted and Synthetic Resources
+          </h3>
+          <p class="pub-authors">
+            Björn Engelmann, <strong>Fabian Haak</strong>, <strong>Philipp Schaer</strong>, Mani Erfanian Abdoust, Linus Netze, and Meik Bittkowski
+          </p>
+          <p class="pub-venue">
+            In Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25). DOI: 10.1145/3726302.3730342
+          </p>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/abs/2504.07584" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>ArXiv Preprint</span> &rarr;
+            </a>
+            <a href="https://doi.org/10.1145/3726302.3730342" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>ACM Digital Library</span>
+            </a>
+            <a href="https://github.com/irgroup/Reanimator" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>GitHub Code</span>
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-sigir25', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-sigir25" class="bibtex-box">@inproceedings{engelmann2025reanimator,
+  author    = {Engelmann, Bj{\"o}rn and Haak, Fabian and Schaer, Philipp and Abdoust, Mani Erfanian and Netze, Linus and Bittkowski, Meik},
+  title     = {REANIMATOR: Reanimate Retrieval Test Collections with Extracted and Synthetic Resources},
+  booktitle = {Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25)},
+  year      = {2025},
+  doi       = {10.1145/3726302.3730342},
+  url       = {https://arxiv.org/abs/2504.07584}
+}</div>
+        </article>
+
+        <!-- Paper 2: Haak & Schaer 2026 (Hidden success factors / tables & figures) -->
+        <article class="pub-card core-pixls" data-category="multimodal">
+          <div class="pub-meta-top">
+            <span class="pub-badge pre">Research Article</span>
+            <span class="pub-year">2026</span>
+            <span class="monolith-label" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">Multimodal Analysis</span>
+          </div>
+          <h3 class="pub-title">
+            Revealing the Hidden Success Factors of Scientific Papers: The Case of Table and Figure References
+          </h3>
+          <p class="pub-authors">
+            <strong>Fabian Haak</strong> and <strong>Philipp Schaer</strong>
+          </p>
+          <p class="pub-venue">
+            Empirical investigation into multimodal scientific document structures, in-text referencing patterns, and their impact on information discovery and scholarly impact.
+          </p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>Google Scholar Entry</span> &rarr;
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-haak2026', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-haak2026" class="bibtex-box">@article{haak2026revealing,
+  author    = {Haak, Fabian and Schaer, Philipp},
+  title     = {Revealing the hidden success factors of scientific papers: the case of table and figure references},
+  year      = {2026}
+}</div>
+        </article>
+
+        <!-- Paper 3: Keller et al. 2026 (Formalized Information Needs) -->
+        <article class="pub-card core-pixls" data-category="synthetic">
+          <div class="pub-meta-top">
+            <span class="pub-badge pre">Research Article</span>
+            <span class="pub-year">2026</span>
+            <span class="monolith-label berry" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">Synthetic Relevance</span>
+          </div>
+          <h3 class="pub-title">
+            Formalized Information Needs Improve Large-Language-Model Relevance Judgments
+          </h3>
+          <p class="pub-authors">
+            Jan Keller, Maik Fröbe, Björn Engelmann, <strong>Fabian Haak</strong>, Timo Breuer, Birger Larsen, and <strong>Philipp Schaer</strong>
+          </p>
+          <p class="pub-venue">
+            Investigation of structured prompt formulation and formalized criteria to enhance reliability and calibration of LLM-generated relevance labels in IR evaluation.
+          </p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>Google Scholar Entry</span> &rarr;
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-keller2026', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-keller2026" class="bibtex-box">@article{keller2026formalized,
+  author    = {Keller, Jan and Fr{\"o}be, Maik and Engelmann, Bj{\"o}rn and Haak, Fabian and Breuer, Timo and Larsen, Birger and Schaer, Philipp},
+  title     = {Formalized Information Needs Improve Large-Language-Model Relevance Judgments},
+  year      = {2026}
+}</div>
+        </article>
+
+        <!-- Paper 4: Wolff et al. NSLP 2024 (Enriched BERT Embeddings) -->
+        <article class="pub-card related" data-category="kg">
+          <div class="pub-meta-top">
+            <span class="pub-badge nslp">NSLP 2024 / Springer</span>
+            <span class="pub-year">2024 • Cham, Switzerland</span>
+            <span class="monolith-label gold" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">AP 3 ZB MED KE</span>
+          </div>
+          <h3 class="pub-title">
+            Enriched BERT Embeddings for Scholarly Publication Classification
+          </h3>
+          <p class="pub-authors">
+            <strong>Benjamin Wolff</strong>, Eva Seidlmayer, and <strong>Konrad U. Förstner</strong>
+          </p>
+          <p class="pub-venue">
+            In International Workshop on Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024), Communications in Computer and Information Science, Springer Nature Switzerland, pp. 234–243. DOI: 10.1007/978-3-031-65794-8_16
+          </p>
+          <div class="pub-actions">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-65794-8_16" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>Springer Link</span> &rarr;
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-wolff2024', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-wolff2024" class="bibtex-box">@inproceedings{wolff2024enriched,
+  author    = {Wolff, Benjamin and Seidlmayer, Eva and F{\"o}rstner, Konrad U.},
+  title     = {Enriched BERT Embeddings for Scholarly Publication Classification},
+  booktitle = {Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024)},
+  pages     = {234--243},
+  year      = {2024},
+  publisher = {Springer Nature Switzerland},
+  doi       = {10.1007/978-3-031-65794-8_16}
+}</div>
+        </article>
+
+        <!-- Paper 5: Keller et al. TREC 2024 RAG -->
+        <article class="pub-card related" data-category="multimodal synthetic">
+          <div class="pub-meta-top">
+            <span class="pub-badge trec">TREC 2024 Proceedings</span>
+            <span class="pub-year">2024 • NIST, Gaithersburg, USA</span>
+          </div>
+          <h3 class="pub-title">
+            CIR at TREC 2024 RAG: Task 2 – Augmented Generation with Diversified Segments and Knowledge Adaption
+          </h3>
+          <p class="pub-authors">
+            Jan Keller, Björn Engelmann, <strong>Fabian Haak</strong>, <strong>Philipp Schaer</strong>, Hermann Kroll, and Christoph K. Kreutz
+          </p>
+          <p class="pub-venue">
+            In The Thirty-Third Text REtrieval Conference Proceedings (TREC 2024), National Institute of Standards and Technology (NIST SP 1329).
+          </p>
+          <div class="pub-actions">
+            <a href="https://trec.nist.gov/pubs/trec33/papers/CIR.rag.pdf" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>NIST Proceedings PDF</span> &rarr;
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-trec24', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-trec24" class="bibtex-box">@inproceedings{keller2024cir,
+  author    = {Keller, Jan and Engelmann, Bj{\"o}rn and Haak, Fabian and Schaer, Philipp and Kroll, Hermann and Kreutz, Christoph K.},
+  title     = {CIR at TREC 2024 RAG: Task 2 - Augmented Generation with Diversified Segments and Knowledge Adaption},
+  booktitle = {The Thirty-Third Text REtrieval Conference Proceedings (TREC 2024)},
+  series    = {NIST Special Publication 1329},
+  year      = {2024},
+  url       = {https://trec.nist.gov/pubs/trec33/papers/CIR.rag.pdf}
+}</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       ISI 2027 WORKSHOP SECTION
+       ======================================================================= -->
+  <section id="workshop">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header berry">Community Workshop</h2>
+        <p class="section-lead">
+          Fostering exchange between research and infrastructure practice across German and international digital libraries.
+        </p>
+      </div>
+
+      <div class="workshop-banner">
+        <div class="workshop-header-grid">
+          <div>
+            <span class="workshop-venue-tag">ISI 2027 • Hamburg</span>
+            <h3 class="workshop-title">Information Extraction in Practice</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.25rem;">
+              Information extraction (IE) has transitioned from research prototypes into everyday practice across libraries, archives, and research data services. While LLMs and VLMs have dramatically lowered entry barriers, deploying robust pipelines in production raises vital questions about <strong>quality assurance</strong>, <strong>data provenance</strong>, <strong>computational cost</strong>, and <strong>long-term service sustainability</strong>.
+            </p>
+            <p style="color: var(--color-text-muted); line-height: 1.7;">
+              Co-organized by leaders from <strong>TH Köln</strong>, <strong>ZB MED</strong>, <strong>ZBW</strong>, and <strong>GESIS</strong>, this half-day workshop brings together practitioners and researchers from the DFG LIS programme, Leibniz institutes, and NFDI consortia to seed a sustainable community of practice.
+            </p>
+          </div>
+
+          <!-- Important Dates Card -->
+          <div class="workshop-dates-card">
+            <h4 class="dates-title">
+              <span aria-hidden="true">📅</span>
+              <span>Tentative Timeline (ISI 2027)</span>
+            </h4>
+            <ul class="dates-list">
+              <li>
+                <span class="date-label">Call for Contributions:</span>
+                <span class="date-val">14.12.2026</span>
+              </li>
+              <li>
+                <span class="date-label">Submission Deadline:</span>
+                <span class="date-val">25.01.2027</span>
+              </li>
+              <li>
+                <span class="date-label">Author Notification:</span>
+                <span class="date-val">08.02.2027</span>
+              </li>
+              <li>
+                <span class="date-label">Camera-Ready Abstract:</span>
+                <span class="date-val">22.02.2027</span>
+              </li>
+              <li>
+                <span class="date-label">Workshop Venue:</span>
+                <span class="date-val">Hamburg, Germany</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.25rem; font-size: 0.8rem; color: var(--color-gold-text); border-top: 1px solid var(--color-gold-border); padding-top: 0.75rem;">
+              <em>Outcomes: Joint synthesis report in <strong>Datenbank-Spektrum</strong> (Springer) and a curated open list of IE tools &amp; datasets.</em>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topics of Interest -->
+        <h4 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--color-text-main); margin-top: 1.5rem;">
+          Topics of Interest
+        </h4>
+        <div class="workshop-topics-grid">
+          <div class="topic-box">
+            <h5 class="topic-box-title">Pipelines &amp; Multimodal Parsing</h5>
+            <ul>
+              <li>Extraction from OCR output, historical PDFs, tables, and figures</li>
+              <li>LLM- and VLM-based extraction in production: prompting, fine-tuning, and hallucination control</li>
+              <li>Entity linking to authority files and knowledge graphs (GND, Wikidata, ORKG)</li>
+            </ul>
+          </div>
+          <div class="topic-box">
+            <h5 class="topic-box-title">Evaluation, QA &amp; Provenance</h5>
+            <ul>
+              <li>Evaluation methodologies, gold standards, and benchmark datasets</li>
+              <li>Human-in-the-loop workflows for subject experts and cataloguers</li>
+              <li>FAIR publication, data provenance, and transparency of extracted metadata</li>
+            </ul>
+          </div>
+          <div class="topic-box">
+            <h5 class="topic-box-title">Infrastructure &amp; Sustainability</h5>
+            <ul>
+              <li>Moving IE components from funded DFG/NFDI projects into permanent library services</li>
+              <li>Operational cost, latency, and hardware constraints in production</li>
+              <li>Legal and ethical aspects under German text and data mining copyright law</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Organizers -->
+        <h4 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--color-text-main); margin-top: 1.5rem;">
+          Workshop Organizers
+        </h4>
+        <div class="organizers-grid">
+          <div class="organizer-card">
+            <p class="organizer-name">Prof. Dr. Philipp Schaer</p>
+            <p class="organizer-role">Professor for Information Retrieval</p>
+            <p class="organizer-inst">TH Köln</p>
+          </div>
+          <div class="organizer-card">
+            <p class="organizer-name">Prof. Dr. Konrad U. Förstner</p>
+            <p class="organizer-role">Head of Data Science &amp; Services</p>
+            <p class="organizer-inst">ZB MED / TH Köln</p>
+          </div>
+          <div class="organizer-card">
+            <p class="organizer-name">Prof. Dr. Ralf Krestel</p>
+            <p class="organizer-role">Information Profiling &amp; Retrieval</p>
+            <p class="organizer-inst">ZBW &amp; CAU Kiel</p>
+          </div>
+          <div class="organizer-card">
+            <p class="organizer-name">Dr. Benjamin Zapilko</p>
+            <p class="organizer-role">Team Lead Information Extraction &amp; Linking</p>
+            <p class="organizer-inst">GESIS Leibniz Institute</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       TEAM & INSTITUTIONS SECTION
+       ======================================================================= -->
+  <section class="section-alt" id="team">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header">Participating Institutes &amp; Team</h2>
+        <p class="section-lead">
+          PIXLS combines the information retrieval expertise of TH Köln with the life sciences infrastructure and data science capabilities of ZB MED.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Partner 1: TH Köln -->
+        <div class="institute-card">
+          <div class="inst-header th-koeln">
+            <div>
+              <h3 class="inst-title">TH Köln</h3>
+              <p class="inst-subtitle">Information Retrieval Research Group (IRgroup)</p>
+            </div>
+            <img src="assets/img/th-koeln-emblem.svg" alt="TH Köln Emblem" style="height: 38px; width: auto; background: white; padding: 2px 6px; border-radius: 4px;">
+          </div>
+          <div class="inst-body">
+            <!-- Philipp Schaer -->
+            <div class="person-profile">
+              <h4 class="person-name">Prof. Dr. Philipp Schaer</h4>
+              <p class="person-title">Principal Investigator (Project Lead)</p>
+              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
+                Professor of Information Retrieval at the Faculty of Information Science and Communication Studies. Research focuses on information extraction for retrieval purposes, value-added digital library services, and synthetic evaluation.
+              </p>
+              <div class="person-links">
+                <a href="mailto:philipp.schaer@th-koeln.de" class="link-tag">Email</a>
+                <a href="https://ir.web.th-koeln.de/" target="_blank" rel="noopener noreferrer" class="link-tag">IRgroup Site</a>
+              </div>
+            </div>
+
+            <!-- Fabian Haak -->
+            <div class="person-profile">
+              <h4 class="person-name">Fabian Haak, M.Sc.</h4>
+              <p class="person-title">Research Associate &amp; Doctoral Researcher</p>
+              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
+                Researcher at TH Köln focusing on multimodal document parsing, Vision-Language Model architectures for scientific literature, table extraction, and <code>reanimator-vlm</code>.
+              </p>
+              <div class="person-links">
+                <a href="mailto:fabian.haak@th-koeln.de" class="link-tag">Email</a>
+                <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="link-tag">Google Scholar</a>
+                <a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer" class="link-tag">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner 2: ZB MED -->
+        <div class="institute-card">
+          <div class="inst-header zb-med">
+            <div>
+              <h3 class="inst-title">ZB MED</h3>
+              <p class="inst-subtitle">Information Centre for Life Sciences</p>
+            </div>
+            <img src="assets/img/zbmed-emblem.svg" alt="ZB MED Emblem" style="height: 38px; width: auto; background: white; padding: 2px 6px; border-radius: 4px;">
+          </div>
+          <div class="inst-body">
+            <!-- Konrad Förstner -->
+            <div class="person-profile">
+              <h4 class="person-name">Prof. Dr. Konrad U. Förstner</h4>
+              <p class="person-title">Principal Investigator (Project Lead)</p>
+              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
+                Head of Data Science &amp; Services at ZB MED and Professor of Information &amp; Data Literacy at TH Köln. Expertise in biomedical knowledge graphs, open research infrastructures, and data science in the life sciences.
+              </p>
+              <div class="person-links">
+                <a href="mailto:foerstner@zbmed.de" class="link-tag">Email</a>
+                <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer" class="link-tag">ZB MED Portal</a>
+              </div>
+            </div>
+
+            <!-- Benjamin Wolff -->
+            <div class="person-profile">
+              <h4 class="person-name">Benjamin Wolff, M.Sc.</h4>
+              <p class="person-title">Research Associate</p>
+              <p style="font-size: 0.88rem; color: var(--color-text-muted);">
+                Researcher at ZB MED leading data acquisition pipelines across preprint repositories, Knowledge Environment (KE) integration, and semantically enriched BERT embeddings.
+              </p>
+              <div class="person-links">
+                <a href="https://scholar.google.com/citations?hl=en&user=CqeS0DQAAAAJ" target="_blank" rel="noopener noreferrer" class="link-tag">Google Scholar</a>
+                <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer" class="link-tag">ZB MED Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       DFG FUNDING & GOVERNANCE
+       ======================================================================= -->
+  <section id="funding">
+    <div class="container">
+      <div class="dfg-grant-box">
+        <div>
+          <img src="assets/img/dfg-logo.svg" alt="Gefördert durch die Deutsche Forschungsgemeinschaft (DFG)" style="max-width: 260px; margin-bottom: 1rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--color-primary);">
+            DFG Funding &amp; Project Metadata
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin-top: 0.5rem;">
+            This project is funded by the Deutsche Forschungsgemeinschaft (German Research Foundation) within the funding program <em>"Scientific Library Services and Information Systems" (LIS)</em>.
+          </p>
+        </div>
+
+        <div>
+          <table class="dfg-details-table">
+            <tbody>
+              <tr>
+                <td>Official Title</td>
+                <td>Preprint Information eXtraction for Life Sciences (PIXLS)</td>
+              </tr>
+              <tr>
+                <td>DFG Project Number</td>
+                <td><a href="https://gepris.dfg.de/gepris/projekt/492813820" target="_blank" rel="noopener noreferrer" style="font-weight: 700;">492813820 (GEPRIS Entry &rarr;)</a></td>
+              </tr>
+              <tr>
+                <td>Program</td>
+                <td>Scientific Library Services and Information Systems (LIS)</td>
+              </tr>
+              <tr>
+                <td>Applicants</td>
+                <td>Prof. Dr. Philipp Schaer (TH Köln), Prof. Dr. Konrad U. Förstner (ZB MED)</td>
+              </tr>
+              <tr>
+                <td>Project Period</td>
+                <td>01.01.2023 – 31.10.2026</td>
+              </tr>
+              <tr>
+                <td>FAIR &amp; Open Science</td>
+                <td>Open Source Toolkits (MIT), Open Access preprints, CC-BY Dissemination</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       FOOTER
+       ======================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-title">PIXLS</div>
+          <p>
+            Preprint Information eXtraction for Life Sciences.<br>
+            A joint research initiative by TH Köln and ZB MED funded by the Deutsche Forschungsgemeinschaft (DFG).
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #8ea2a2;">
+            DFG Förderkennzeichen: 492813820
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation &amp; Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About the Project</a></li>
+            <li><a href="#pillars">Research Pillars</a></li>
+            <li><a href="#tools">reanimator-vlm Toolkit</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#workshop">ISI 2027 Workshop</a></li>
+            <li><a href="#team">Team &amp; Institutes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Open Repositories</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/irgroup/PIXLS_website" target="_blank" rel="noopener noreferrer">Website Repository (GitHub)</a></li>
+            <li><a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer">REANIMATOR-VLM on GitHub</a></li>
+            <li><a href="https://pypi.org/project/reanimator-vlm/" target="_blank" rel="noopener noreferrer">PyPI Package (reanimator-vlm)</a></li>
+            <li><a href="https://github.com/irgroup/Reanimator" target="_blank" rel="noopener noreferrer">Original REANIMATOR (SIGIR '25)</a></li>
+            <li><a href="https://gepris.dfg.de/gepris/projekt/492813820" target="_blank" rel="noopener noreferrer">DFG GEPRIS Database</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2023–2026 PIXLS Research Project. Licensed under CC-BY 4.0 / MIT.
+        </div>
+        <div>
+          TH Köln (IRgroup) &bull; ZB MED Informationszentrum Lebenswissenschaften
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Bundle -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
