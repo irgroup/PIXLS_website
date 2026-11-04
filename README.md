@@ -39,6 +39,10 @@ Preprint servers have become vital in modern life sciences communication, offeri
 - **Original REANIMATOR Framework (ACM SIGIR '25)**:
   - Repository: [`https://github.com/irgroup/Reanimator`](https://github.com/irgroup/Reanimator)
   - Paper: [`https://arxiv.org/abs/2504.07584`](https://arxiv.org/abs/2504.07584) / DOI: `10.1145/3726302.3730342`
+- **SEASON 2026 Poster (REANIMATOR Sample Case)**:
+  - *"Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics"*
+  - Figshare DOI: [`https://doi.org/10.6084/m9.figshare.34912698`](https://doi.org/10.6084/m9.figshare.34912698)
+  - Programme: [`https://searchenginesandsociety.net/season-2026/programme/`](https://searchenginesandsociety.net/season-2026/programme/)
 - **ISI 2027 Workshop**:
   - *"Information Extraction in Practice"* co-organized with ZBW & GESIS at ISI 2027 (Hamburg).
 
