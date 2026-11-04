@@ -114,5 +114,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const isShown = postBox.classList.toggle('show');
     buttonEl.innerText = isShown ? 'Show Less ↑' : 'Read Full Post →';
   };
+
+  // 7. Software Carousel Window Controller
+  let currentSoftwareIndex = 0;
+  const softwareSlides = document.querySelectorAll('.software-carousel-slide');
+  const softwareTabs = document.querySelectorAll('.software-tab-btn');
+  const softwareDots = document.querySelectorAll('.carousel-dot');
+  const softwareIndicator = document.querySelector('.carousel-indicator-text');
+
+  window.switchSoftwareTab = function(index) {
+    const slides = document.querySelectorAll('.software-carousel-slide');
+    const tabs = document.querySelectorAll('.software-tab-btn');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const indicator = document.querySelector('.carousel-indicator-text');
+    if (!slides.length) return;
+
+    currentSoftwareIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === currentSoftwareIndex);
+    });
+
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle('active', i === currentSoftwareIndex);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSoftwareIndex);
+    });
+
+    if (indicator) {
+      indicator.textContent = `${currentSoftwareIndex + 1} / ${slides.length}`;
+    }
+  };
+
+  window.nextSoftwareSlide = function() {
+    window.switchSoftwareTab(currentSoftwareIndex + 1);
+  };
+
+  window.prevSoftwareSlide = function() {
+    window.switchSoftwareTab(currentSoftwareIndex - 1);
+  };
 });
 

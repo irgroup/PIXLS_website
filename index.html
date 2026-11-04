@@ -241,7 +241,7 @@
             </p>
             <ul class="pillar-features-list">
               <li>530,000+ preprints (<a href="https://www.biorxiv.org/" target="_blank" rel="noopener noreferrer">bioRxiv</a>, <a href="https://www.medrxiv.org/" target="_blank" rel="noopener noreferrer">medRxiv</a>, <a href="https://osf.io/preprints/" target="_blank" rel="noopener noreferrer">OSF</a>)</li>
-              <li>Open harvester: <a href="https://codeberg.org/pixls/pixls-preprints" target="_blank" rel="noopener noreferrer"><code>pixls-preprints</code> &rarr;</a></li>
+              <li>Open harvester: <a href="https://codeberg.org/pixls/pixls-preprints" target="_blank" rel="noopener noreferrer"><code>pixls-preprints</code></a></li>
               <li>Staging area &amp; automated test suite</li>
               <li>Operated on <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer">ZB MED</a> infrastructure</li>
             </ul>
@@ -259,7 +259,7 @@
               Deep multimodal document parsing of scientific PDFs using <a href="https://github.com/DS4SD/docling" target="_blank" rel="noopener noreferrer">Docling</a> and Vision-Language Models (VLMs), extracting structured text, machine-readable tables, figures, captions, and in-text references.
             </p>
             <ul class="pillar-features-list">
-              <li>Powered by <a href="https://pypi.org/project/reanimator-vlm/" target="_blank" rel="noopener noreferrer"><code>reanimator-vlm</code></a> (<a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>)</li>
+              <li>Powered by <a href="https://pypi.org/project/reanimator-vlm/" target="_blank" rel="noopener noreferrer"><code>reanimator-vlm</code></a> (<a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer">GitHub</a>)</li>
               <li>In-text reference contextualization</li>
               <li>Structured relational storage</li>
               <li>Independent of closed LLM APIs</li>
@@ -278,8 +278,8 @@
               Homogenization and persistent enrichment of preprint metadata in the <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer">ZB MED Knowledge Environment</a> (KE), combined with semantically enriched BERT embeddings for discovery.
             </p>
             <ul class="pillar-features-list">
-              <li>Direct integration into <a href="https://www.livivo.de/" target="_blank" rel="noopener noreferrer" style="font-weight: 700;">LIVIVO Portal &rarr;</a></li>
-              <li>Schema tool: <a href="https://codeberg.org/pixls/livivo-converter" target="_blank" rel="noopener noreferrer"><code>livivo-converter</code> &rarr;</a></li>
+              <li>Direct integration into <a href="https://www.livivo.de/" target="_blank" rel="noopener noreferrer" style="font-weight: 700;">LIVIVO Portal</a></li>
+              <li>Schema tool: <a href="https://codeberg.org/pixls/livivo-converter" target="_blank" rel="noopener noreferrer"><code>livivo-converter</code></a></li>
               <li>Enriched embeddings (<a href="https://link.springer.com/chapter/10.1007/978-3-031-65794-8_16" target="_blank" rel="noopener noreferrer">NSLP '24</a>)</li>
               <li>FAIR metadata exposure via REST APIs</li>
             </ul>
@@ -297,7 +297,7 @@
               Revitalizing test collections using LLMs/VLMs for synthetic relevance judgments, demonstrating the empirical impact of tables on scientific RAG, and engineering usable RAG demonstrators for Preprints and LIVIVO.
             </p>
             <ul class="pillar-features-list">
-              <li>ACM SIGIR 2025 accepted framework (<a href="https://arxiv.org/abs/2504.07584" target="_blank" rel="noopener noreferrer">Preprint &rarr;</a>)</li>
+              <li>ACM SIGIR 2025 accepted framework (<a href="https://arxiv.org/abs/2504.07584" target="_blank" rel="noopener noreferrer">Preprint</a>)</li>
               <li>TREC-COVID+ multimodal benchmark</li>
               <li>ZB MED RAG demonstrator for Preprints &amp; <a href="https://www.livivo.de/" target="_blank" rel="noopener noreferrer">LIVIVO</a></li>
               <li><a href="https://ir.web.th-koeln.de/" target="_blank" rel="noopener noreferrer">CIR team</a> focus on high-fidelity extraction</li>
@@ -309,59 +309,100 @@
   </section>
 
   <!-- =======================================================================
-       SOFTWARE & TOOLS SPOTLIGHT (REANIMATOR-VLM)
+       SOFTWARE & TOOLS SPOTLIGHT (CAROUSEL WINDOW)
        ======================================================================= -->
   <section id="tools">
     <div class="container">
       <div class="section-intro">
         <h2 class="monolith-header berry">Software &amp; Open Source Tools</h2>
         <p class="section-lead">
-          PIXLS embraces Open Science. Our primary software release, <strong>REANIMATOR-VLM</strong>, is openly distributed on PyPI and GitHub with comprehensive documentation.
+          PIXLS embraces Open Science. Explore our modular open-source software stack for automated acquisition, VLM document extraction, and digital library integration.
         </p>
       </div>
 
-      <div class="software-spotlight">
-        <div class="software-spotlight-content">
-          <span class="monolith-label berry">Featured Toolkit</span>
-          <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin: 0.5rem 0 1rem; color: var(--color-text-main);">
-            reanimator-vlm
-          </h3>
-          <p style="color: var(--color-text-muted); line-height: 1.65; margin-bottom: 1.25rem;">
-            A clean rebuild of REANIMATOR using vision-language models (such as <code>dots.mocr</code>) for document collection processing, structured multimodal element parsing (tables, figures, formulas, text), and domain-independent synthetic relevance assessment via the UMBRELA framework.
-          </p>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
-            <div style="background: var(--color-surface-subtle); padding: 0.85rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-primary);">
-              <strong style="display: block; font-size: 0.88rem; color: var(--color-primary-text);">VLM-Powered Extraction</strong>
-              <span style="font-size: 0.82rem; color: var(--color-text-muted);">High-precision optical recognition of tables, visual elements, and formulas.</span>
-            </div>
-            <div style="background: var(--color-surface-subtle); padding: 0.85rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-berry);">
-              <strong style="display: block; font-size: 0.88rem; color: var(--color-berry-text);">Synthetic Judgments</strong>
-              <span style="font-size: 0.82rem; color: var(--color-text-muted);">Automated, reproducible multi-grade relevance labeling for RAG evaluation.</span>
-            </div>
+      <!-- Carousel Window -->
+      <div class="software-carousel-window">
+        <!-- Titlebar -->
+        <div class="carousel-window-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
           </div>
-
-          <div class="software-links">
-            <a href="https://pypi.org/project/reanimator-vlm/" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith berry" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-              PyPI Package &rarr;
-            </a>
-            <a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
-              GitHub Repository
-            </a>
-            <a href="https://irgroup.github.io/reanimator-vlm/" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
-              Technical Docs
-            </a>
+          <span class="window-title">PIXLS Software &amp; Infrastructure Ecosystem</span>
+          <div class="window-controls-nav">
+            <button class="carousel-nav-btn" onclick="prevSoftwareSlide()" aria-label="Previous tool">&lsaquo;</button>
+            <span class="carousel-indicator-text">1 / 4</span>
+            <button class="carousel-nav-btn" onclick="nextSoftwareSlide()" aria-label="Next tool">&rsaquo;</button>
           </div>
         </div>
 
-        <div class="software-spotlight-code">
-          <div>
-            <div class="code-header-bar">
-              <span class="code-title">Python Quickstart</span>
-              <button class="copy-btn" onclick="copySnippet('codeSnippet', this)">Copy Code</button>
+        <!-- Tool Selection Tabs -->
+        <div class="software-tabs-bar">
+          <button class="software-tab-btn active" onclick="switchSoftwareTab(0)">
+            <span>reanimator-vlm</span>
+            <span class="software-tab-badge">PyPI / VLM</span>
+          </button>
+          <button class="software-tab-btn" onclick="switchSoftwareTab(1)">
+            <span>pixls-preprints</span>
+            <span class="software-tab-badge">Harvester</span>
+          </button>
+          <button class="software-tab-btn" onclick="switchSoftwareTab(2)">
+            <span>livivo-converter</span>
+            <span class="software-tab-badge">LIVIVO Tool</span>
+          </button>
+          <button class="software-tab-btn" onclick="switchSoftwareTab(3)">
+            <span>Reanimator (SIGIR '25)</span>
+            <span class="software-tab-badge">Benchmark</span>
+          </button>
+        </div>
+
+        <!-- Carousel Slide 1: reanimator-vlm -->
+        <div class="software-carousel-slide active" id="slide-tool-1">
+          <div class="software-slide-content">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+              <span class="monolith-label berry">Featured VLM Toolkit</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-berry-dark); font-weight: 700;">Python • PyPI</span>
             </div>
-            <div class="code-body">
-<pre id="codeSnippet"><span style="color: #ff7b72;">from</span> reanimator <span style="color: #ff7b72;">import</span> (
+            <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin: 0.25rem 0 0.85rem; color: var(--color-text-main);">
+              reanimator-vlm
+            </h3>
+            <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              A clean rebuild of the REANIMATOR framework powered by Vision-Language Models (such as <code>dots.mocr</code>) and IBM Docling for end-to-end document collection processing, structured multimodal element parsing (tables, figures, formulas), and domain-independent synthetic relevance assessment (UMBRELA).
+            </p>
+
+            <div class="software-feature-pills">
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-berry);">
+                <strong style="color: var(--color-berry-text);">VLM Optical Parsing</strong>
+                <span>High-precision extraction of tables, formulas, and visual figures without legacy OCR errors.</span>
+              </div>
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-primary);">
+                <strong style="color: var(--color-primary-text);">Synthetic Judgments</strong>
+                <span>Automated, reproducible multi-grade relevance labeling for RAG evaluation benchmarks.</span>
+              </div>
+            </div>
+
+            <div class="software-links">
+              <a href="https://pypi.org/project/reanimator-vlm/" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith berry" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+                PyPI Package
+              </a>
+              <a href="https://github.com/irgroup/REANIMATOR-VLM" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+                GitHub Repository
+              </a>
+              <a href="https://irgroup.github.io/reanimator-vlm/" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+                Technical Docs
+              </a>
+            </div>
+          </div>
+
+          <div class="software-slide-code">
+            <div>
+              <div class="code-header-bar">
+                <span class="code-title">Python Quickstart</span>
+                <button class="copy-btn" onclick="copySnippet('codeSnippet1', this)">Copy Code</button>
+              </div>
+              <div class="code-body">
+<pre id="codeSnippet1"><span style="color: #ff7b72;">from</span> reanimator <span style="color: #ff7b72;">import</span> (
     DocumentCollection,
     MultimodalParser,
     SyntheticAssessor
@@ -384,90 +425,236 @@ judgments = assessor.evaluate_relevance(
     query=<span style="color: #a5d6ff;">"remdesivir clinical efficacy"</span>,
     elements=parsed_docs.get_tables_and_passages()
 )
-
 print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span style="color: #a5d6ff;"> labeled pairs."</span>)</pre>
+              </div>
             </div>
-          </div>
 
-          <div class="install-callout">
-            <span class="install-command" id="pipInstallText">pip install reanimator-vlm</span>
-            <button class="copy-btn" onclick="copySnippet('pipInstallText', this)">Copy</button>
+            <div class="install-callout">
+              <span class="install-command" id="pipInstallText1">pip install reanimator-vlm</span>
+              <button class="copy-btn" onclick="copySnippet('pipInstallText1', this)">Copy</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Additional Repository Artifacts & Tools Grid -->
-      <div style="margin-top: 3rem;">
-        <h3 class="monolith-header gold" style="font-size: 1.15rem; margin-bottom: 0.5rem;">Pipeline Repositories &amp; Infrastructure Tools</h3>
-        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-          In addition to REANIMATOR, the project team maintains production harvesters and data converters for preprint ingestion and discovery systems.
-        </p>
-
-        <div class="tools-grid">
-          <!-- Tool 1: pixls-preprints -->
-          <div class="tool-artifact-card">
-            <div class="artifact-top">
-              <span class="monolith-label" style="font-size: 0.7rem; background-color: var(--color-primary);">Codeberg Harvester</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary-dark); font-weight: 700;">Since 2023</span>
+        <!-- Carousel Slide 2: pixls-preprints -->
+        <div class="software-carousel-slide" id="slide-tool-2">
+          <div class="software-slide-content">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+              <span class="monolith-label teal">Continuous Ingestion</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-primary-dark); font-weight: 700;">Codeberg • Python</span>
             </div>
-            <h4 class="artifact-title">pixls-preprints</h4>
-            <p class="artifact-desc">
-              Modular Python acquisition pipeline that continuously monitors and ingests preprints, PDF documents, and structured metadata across 30+ servers (bioRxiv, medRxiv, OSF archives) using asynchronous rate-limited REST queries.
+            <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin: 0.25rem 0 0.85rem; color: var(--color-text-main);">
+              pixls-preprints
+            </h3>
+            <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Modular Python acquisition and ELT pipeline that continuously monitors and ingests preprints, PDF documents, and structured metadata across 30+ servers (bioRxiv, medRxiv, OSF archives) using asynchronous rate-limited REST queries.
             </p>
-            <div style="margin-top: auto;">
-              <a href="https://codeberg.org/pixls/pixls-preprints" target="_blank" rel="noopener noreferrer" class="btn-pill filled" style="font-size: 0.8rem; width: 100%; justify-content: center;">
-                <span>View on Codeberg &rarr;</span>
+
+            <div class="software-feature-pills">
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-primary);">
+                <strong style="color: var(--color-primary-text);">30+ Preprint Servers</strong>
+                <span>Continuous harvesting from bioRxiv, medRxiv, OSF preprints, PsyArXiv, and more.</span>
+              </div>
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-gold);">
+                <strong style="color: var(--color-gold-text);">Leaky-Bucket Throttle</strong>
+                <span>Polite, resilient request scheduling with automated staging and version history tracking.</span>
+              </div>
+            </div>
+
+            <div class="software-links">
+              <a href="https://codeberg.org/pixls/pixls-preprints" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+                View on Codeberg
+              </a>
+              <a href="https://www.zbmed.de/" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+                ZB MED Infrastructure
               </a>
             </div>
           </div>
 
-          <!-- Tool 2: livivo-converter -->
-          <div class="tool-artifact-card">
-            <div class="artifact-top">
-              <span class="monolith-label gold" style="font-size: 0.7rem;">Codeberg Converter</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-gold-dark); font-weight: 700;">2024 – 2027</span>
+          <div class="software-slide-code">
+            <div>
+              <div class="code-header-bar">
+                <span class="code-title">Harvester Quickstart</span>
+                <button class="copy-btn" onclick="copySnippet('codeSnippet2', this)">Copy Code</button>
+              </div>
+              <div class="code-body">
+<pre id="codeSnippet2"><span style="color: #8b949e;"># 1. Clone the asynchronous harvester repository</span>
+git clone <span style="color: #a5d6ff;">https://codeberg.org/pixls/pixls-preprints.git</span>
+<span style="color: #79c0ff;">cd</span> pixls-preprints &amp;&amp; pip install -r requirements.txt
+
+<span style="color: #8b949e;"># 2. Run continuous ingestion pipeline across bioRxiv &amp; OSF</span>
+python -m pixls_preprints.harvester \
+  --sources biorxiv,medrxiv,osf \
+  --rate-limit leaky-bucket \
+  --output-dir <span style="color: #a5d6ff;">./data/staging/</span> \
+  --track-versions
+
+<span style="color: #8b949e;"># 3. Verify staging metadata and PDFs</span>
+python -m pixls_preprints.validator --check-staging</pre>
+              </div>
             </div>
-            <h4 class="artifact-title">livivo-converter</h4>
-            <p class="artifact-desc">
-              Transformation and schema-mapping toolkit that formats heterogeneous preprint metadata and multimodal structures into standardized representations required for indexing within the <a href="https://www.livivo.de/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">LIVIVO</a> life science search environment.
+
+            <div class="install-callout">
+              <span class="install-command" id="pipInstallText2">git clone https://codeberg.org/pixls/pixls-preprints.git</span>
+              <button class="copy-btn" onclick="copySnippet('pipInstallText2', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Slide 3: livivo-converter -->
+        <div class="software-carousel-slide" id="slide-tool-3">
+          <div class="software-slide-content">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+              <span class="monolith-label gold">Schema Mapping</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 700;">Codeberg • Python</span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin: 0.25rem 0 0.85rem; color: var(--color-text-main);">
+              livivo-converter
+            </h3>
+            <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Transformation and schema-mapping toolkit that formats heterogeneous preprint metadata and multimodal structures into standardized representations required for indexing within the LIVIVO life science search environment.
             </p>
-            <div style="margin-top: auto;">
-              <a href="https://codeberg.org/pixls/livivo-converter" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.8rem; width: 100%; justify-content: center; border-color: var(--color-gold); color: var(--color-gold-dark);">
-                <span>View on Codeberg &rarr;</span>
+
+            <div class="software-feature-pills">
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-gold);">
+                <strong style="color: var(--color-gold-text);">LIVIVO Schema Harmonization</strong>
+                <span>Transforms diverse preprint schemas into unified ZB MED Knowledge Environment records.</span>
+              </div>
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-berry);">
+                <strong style="color: var(--color-berry-text);">Enriched Embeddings</strong>
+                <span>Generates BERT and biomedical domain embeddings for semantic scholarly discovery.</span>
+              </div>
+            </div>
+
+            <div class="software-links">
+              <a href="https://codeberg.org/pixls/livivo-converter" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith gold" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+                View on Codeberg
+              </a>
+              <a href="https://www.livivo.de/" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+                LIVIVO Search Portal
               </a>
             </div>
           </div>
 
-          <!-- Tool 3: Reanimator Benchmark -->
-          <div class="tool-artifact-card">
-            <div class="artifact-top">
-              <span class="monolith-label berry" style="font-size: 0.7rem;">GitHub Framework</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-berry-dark); font-weight: 700;">SIGIR '25</span>
+          <div class="software-slide-code">
+            <div>
+              <div class="code-header-bar">
+                <span class="code-title">Conversion CLI</span>
+                <button class="copy-btn" onclick="copySnippet('codeSnippet3', this)">Copy Code</button>
+              </div>
+              <div class="code-body">
+<pre id="codeSnippet3"><span style="color: #8b949e;"># 1. Clone the LIVIVO schema converter repository</span>
+git clone <span style="color: #a5d6ff;">https://codeberg.org/pixls/livivo-converter.git</span>
+<span style="color: #79c0ff;">cd</span> livivo-converter &amp;&amp; pip install -r requirements.txt
+
+<span style="color: #8b949e;"># 2. Convert multimodal preprints to LIVIVO ingestion schema</span>
+python -m livivo_converter.cli \
+  --input-dir <span style="color: #a5d6ff;">./parsed_preprints/</span> \
+  --schema zbmed-ke-v2 \
+  --enrich-bert-embeddings \
+  --output <span style="color: #a5d6ff;">./livivo_ready.jsonl</span>
+
+<span style="color: #8b949e;"># 3. Export indices for ZB MED Knowledge Environment</span>
+python -m livivo_converter.export --target elasticsearch</pre>
+              </div>
             </div>
-            <h4 class="artifact-title">Reanimator (Core Framework)</h4>
-            <p class="artifact-desc">
-              Original framework repository and TREC-COVID+ evaluation resources for revitalizing retrieval test collections through extracted tables, in-text references, and synthetic relevance judgments accepted at ACM SIGIR 2025.
+
+            <div class="install-callout">
+              <span class="install-command" id="pipInstallText3">git clone https://codeberg.org/pixls/livivo-converter.git</span>
+              <button class="copy-btn" onclick="copySnippet('pipInstallText3', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Slide 4: Reanimator Core (SIGIR '25) -->
+        <div class="software-carousel-slide" id="slide-tool-4">
+          <div class="software-slide-content">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+              <span class="monolith-label berry">ACM SIGIR '25</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-berry-dark); font-weight: 700;">GitHub • Benchmark</span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin: 0.25rem 0 0.85rem; color: var(--color-text-main);">
+              Reanimator (Core Framework)
+            </h3>
+            <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Original framework repository and TREC-COVID+ evaluation resources for revitalizing retrieval test collections through extracted tables, in-text references, and synthetic relevance judgments accepted at ACM SIGIR 2025 (Padua, Italy).
             </p>
-            <div style="margin-top: auto;">
-              <a href="https://github.com/irgroup/Reanimator" target="_blank" rel="noopener noreferrer" class="btn-pill berry" style="font-size: 0.8rem; width: 100%; justify-content: center;">
-                <span>View on GitHub &rarr;</span>
+
+            <div class="software-feature-pills">
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-berry);">
+                <strong style="color: var(--color-berry-text);">TREC-COVID+ Benchmark</strong>
+                <span>13,858 extracted tables and 175,000+ passages with synthetic relevance labels.</span>
+              </div>
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-primary);">
+                <strong style="color: var(--color-primary-text);">Multimodal RAG Evaluation</strong>
+                <span>Pairwise LLM Elo tournament runner and RAGAS metric comparative ablation scripts.</span>
+              </div>
+            </div>
+
+            <div class="software-links">
+              <a href="https://github.com/irgroup/Reanimator" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith berry" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+                GitHub Repository
+              </a>
+              <a href="https://arxiv.org/abs/2504.07584" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+                SIGIR '25 Preprint
+              </a>
+              <a href="https://doi.org/10.1145/3726302.3730342" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">
+                ACM Digital Library
               </a>
             </div>
           </div>
+
+          <div class="software-slide-code">
+            <div>
+              <div class="code-header-bar">
+                <span class="code-title">Benchmark Runner Quickstart</span>
+                <button class="copy-btn" onclick="copySnippet('codeSnippet4', this)">Copy Code</button>
+              </div>
+              <div class="code-body">
+<pre id="codeSnippet4"><span style="color: #8b949e;"># 1. Clone the original SIGIR '25 evaluation repository</span>
+git clone <span style="color: #a5d6ff;">https://github.com/irgroup/Reanimator.git</span>
+<span style="color: #79c0ff;">cd</span> Reanimator &amp;&amp; pip install -r requirements.txt
+
+<span style="color: #8b949e;"># 2. Run multimodal RAG evaluation on TREC-COVID+</span>
+python evaluate_rag.py \
+  --benchmark trec-covid-plus \
+  --modalities text,tables,interleaved \
+  --retrievers bm25,cosine \
+  --generator claude-3-5-sonnet \
+  --metrics ragas,elo
+
+<span style="color: #8b949e;"># 3. Output Elo scores and win rates</span>
+python analyze_elo.py --ratings-file <span style="color: #a5d6ff;">./results/elo_ratings.json</span></pre>
+              </div>
+            </div>
+
+            <div class="install-callout">
+              <span class="install-command" id="pipInstallText4">git clone https://github.com/irgroup/Reanimator.git</span>
+              <button class="copy-btn" onclick="copySnippet('pipInstallText4', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Bottom Navigation Dots -->
+        <div class="carousel-dots-bottom">
+          <button class="carousel-dot active" onclick="switchSoftwareTab(0)" aria-label="Slide 1"></button>
+          <button class="carousel-dot" onclick="switchSoftwareTab(1)" aria-label="Slide 2"></button>
+          <button class="carousel-dot" onclick="switchSoftwareTab(2)" aria-label="Slide 3"></button>
+          <button class="carousel-dot" onclick="switchSoftwareTab(3)" aria-label="Slide 4"></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       PUBLICATIONS & DISSEMINATION SECTION
+       PUBLICATIONS & DISSEMINATION SECTION (CHRONOLOGICAL)
        ======================================================================= -->
   <section class="section-alt" id="publications">
     <div class="container">
       <div class="section-intro">
         <h2 class="monolith-header">Publications &amp; Dissemination</h2>
         <p class="section-lead">
-          Peer-reviewed articles, conference proceedings, and benchmarks directly originating from or closely aligned with the PIXLS project scope.
+          Peer-reviewed articles, conference proceedings, and benchmarks directly originating from or closely aligned with the PIXLS project scope, sorted chronologically.
         </p>
       </div>
 
@@ -480,11 +667,54 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
       </div>
 
       <div class="publications-list">
-        <!-- Paper 1: SIGIR 2025 REANIMATOR -->
+        <!-- 1. SEASON 2026 Poster (March 2026) -->
+        <article class="pub-card core-pixls" data-category="retrieval">
+          <div class="pub-meta-top">
+            <span class="pub-badge" style="background-color: var(--color-gold-light); color: var(--color-gold-text); border: 1px solid var(--color-gold-border);">SEASON 2026 Poster</span>
+            <span class="pub-year">March 16–18, 2026 • Cologne, Germany</span>
+            <span class="monolith-label gold" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">REANIMATOR Sample Case</span>
+          </div>
+          <h3 class="pub-title">
+            Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics
+          </h3>
+          <p class="pub-authors">
+            Fabian Haak and Philipp Schaer
+          </p>
+          <p class="pub-venue">
+            Poster presented at the Conference on Search Engines and Society (SEASON 2026), Cologne, Germany. DOI: <a href="https://doi.org/10.6084/m9.figshare.34912698" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600;">10.6084/m9.figshare.34912698</a>
+          </p>
+          <div class="pub-summary">
+            Large-scale empirical meta-science study parsing 7,676 bioRxiv preprints with REANIMATOR to identify multimodal, structural, and linguistic drivers of peer-reviewed publication conversion and venue prestige. Detailed findings are discussed in our <a href="#blog-post-1" style="color: var(--color-primary); font-weight: 600;">Project Blog</a>.
+          </div>
+          <div class="pub-actions">
+            <a href="https://doi.org/10.6084/m9.figshare.34912698" target="_blank" rel="noopener noreferrer" class="pub-link-btn" style="background: var(--color-gold-light); border-color: var(--color-gold-border); color: var(--color-gold-dark);">
+              <span>Figshare Poster (DOI)</span>
+            </a>
+            <a href="https://searchenginesandsociety.net/season-2026/programme/" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>SEASON 2026 Programme</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>Google Scholar</span>
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-season26', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-season26" class="bibtex-box">@misc{haak2026revealing,
+  author       = {Haak, Fabian and Schaer, Philipp},
+  title        = {Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics},
+  howpublished = {Poster presented at Search Engines and Society (SEASON 2026), Cologne, Germany},
+  year         = {2026},
+  doi          = {10.6084/m9.figshare.34912698},
+  url          = {https://doi.org/10.6084/m9.figshare.34912698}
+}</div>
+        </article>
+
+        <!-- 2. ACM SIGIR 2025 Paper (July 2025) -->
         <article class="pub-card core-pixls" data-category="retrieval">
           <div class="pub-meta-top">
             <span class="pub-badge sigir">ACM SIGIR 2025</span>
-            <span class="pub-year">2025 • Padua, Italy</span>
+            <span class="pub-year">July 13–18, 2025 • Padua, Italy</span>
             <span class="monolith-label berry" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">Core PIXLS Framework</span>
           </div>
           <h3 class="pub-title">
@@ -496,9 +726,12 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
           <p class="pub-venue">
             In Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25). ACM, New York, NY, USA, 11 pages. DOI: 10.1145/3726302.3730342
           </p>
+          <div class="pub-summary">
+            Introduces the REANIMATOR framework for automated multimodal extraction (tables, in-text citation links) and synthetic LLM relevance assessment (UMBRELA), establishing the revitalized TREC-COVID+ benchmark for multimodal RAG.
+          </div>
           <div class="pub-actions">
             <a href="https://arxiv.org/abs/2504.07584" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>ArXiv Preprint</span> &rarr;
+              <span>ArXiv Preprint</span>
             </a>
             <a href="https://doi.org/10.1145/3726302.3730342" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
               <span>ACM Digital Library</span>
@@ -520,98 +753,11 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
 }</div>
         </article>
 
-        <!-- Paper 2: SEASON 2026 Poster (Hidden Success Factors - Sample Case) -->
-        <article class="pub-card core-pixls" data-category="retrieval">
-          <div class="pub-meta-top">
-            <span class="pub-badge" style="background-color: var(--color-gold-light); color: var(--color-gold-text); border: 1px solid var(--color-gold-border);">SEASON 2026 Poster</span>
-            <span class="pub-year">March 16–18, 2026 • Cologne, Germany</span>
-            <span class="monolith-label gold" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">REANIMATOR Sample Case</span>
-          </div>
-          <h3 class="pub-title">
-            Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics
-          </h3>
-          <p class="pub-authors">
-            Fabian Haak and Philipp Schaer
-          </p>
-          <p class="pub-venue">
-            Poster presented at the Conference on Search Engines and Society (SEASON 2026), Cologne, Germany. DOI: <a href="https://doi.org/10.6084/m9.figshare.34912698" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600;">10.6084/m9.figshare.34912698</a>
-          </p>
-          <div style="background: var(--color-gold-light); border: 1px solid var(--color-gold-border); border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin: 0.75rem 0 1rem;">
-            <strong style="font-size: 0.85rem; color: var(--color-gold-dark); display: block; margin-bottom: 0.35rem;">
-              Empirical Sample Case for REANIMATOR Parsing:
-            </strong>
-            <p style="font-size: 0.83rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0.5rem;">
-              Demonstrating the real-world utility of the REANIMATOR pipeline, this study extracted and analyzed full multimodal elements (figures, tables, references, linguistic properties) across scientific corpora to uncover determinants of paper success.
-            </p>
-            <ul style="font-size: 0.82rem; color: var(--color-text-main); margin-left: 1.2rem; line-height: 1.4;">
-              <li><strong>Visuals matter:</strong> Use figures, describe them thoroughly in captions and running text, and place an early visual on page 1 or 2.</li>
-              <li><strong>Writing tone:</strong> Use active first-person "we" and avoid passive voice. Complex language is fine, but avoid intensifiers and unnecessary synonyms.</li>
-              <li><strong>Section balance:</strong> Avoid overly detailed method sections; keep the focus firmly on results.</li>
-              <li><strong>Surprisingly insignificant:</strong> Latinate nominalizations, table caption length, exclamation marks, and abstract sentence length showed negligible correlation with impact.</li>
-            </ul>
-          </div>
-          <div class="pub-actions">
-            <a href="https://doi.org/10.6084/m9.figshare.34912698" target="_blank" rel="noopener noreferrer" class="pub-link-btn" style="background: var(--color-gold-light); border-color: var(--color-gold-border); color: var(--color-gold-dark);">
-              <span>Figshare Poster (DOI)</span> &rarr;
-            </a>
-            <a href="https://searchenginesandsociety.net/season-2026/programme/" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>SEASON 2026 Programme</span> &rarr;
-            </a>
-            <a href="https://scholar.google.com/citations?user=EqACv2QAAAAJ" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>Google Scholar</span>
-            </a>
-            <button class="pub-link-btn" onclick="toggleBibtex('bib-season26', this)" style="cursor: pointer; background: white;">
-              BibTeX
-            </button>
-          </div>
-          <div id="bib-season26" class="bibtex-box">@misc{haak2026revealing,
-  author       = {Haak, Fabian and Schaer, Philipp},
-  title        = {Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics},
-  howpublished = {Poster presented at Search Engines and Society (SEASON 2026), Cologne, Germany},
-  year         = {2026},
-  doi          = {10.6084/m9.figshare.34912698},
-  url          = {https://doi.org/10.6084/m9.figshare.34912698}
-}</div>
-        </article>
-
-        <!-- Paper 3: EMNLP 2024 Findings (ARTS) -->
-        <article class="pub-card related" data-category="simplicity">
-          <div class="pub-meta-top">
-            <span class="pub-badge" style="background-color: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0;">EMNLP 2024 Findings</span>
-            <span class="pub-year">2024 • Miami, Florida, USA</span>
-          </div>
-          <h3 class="pub-title">
-            ARTS: Assessing Readability &amp; Text Simplicity
-          </h3>
-          <p class="pub-authors">
-            Björn Engelmann, Christoph K. Kreutz, Fabian Haak, and Philipp Schaer
-          </p>
-          <p class="pub-venue">
-            In Findings of the Association for Computational Linguistics: EMNLP 2024, pages 14925–14942, Miami, Florida, USA: Association for Computational Linguistics. DOI: 10.18653/v1/2024.findings-emnlp.877
-          </p>
-          <div class="pub-actions">
-            <a href="https://doi.org/10.18653/v1/2024.findings-emnlp.877" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>ACL Anthology</span> &rarr;
-            </a>
-            <button class="pub-link-btn" onclick="toggleBibtex('bib-arts24', this)" style="cursor: pointer; background: white;">
-              BibTeX
-            </button>
-          </div>
-          <div id="bib-arts24" class="bibtex-box">@inproceedings{engelmann2024arts,
-  author    = {Engelmann, Bj{\"o}rn and Kreutz, Christoph K. and Haak, Fabian and Schaer, Philipp},
-  title     = {ARTS: Assessing Readability \& Text Simplicity},
-  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
-  pages     = {14925--14942},
-  year      = {2024},
-  doi       = {10.18653/v1/2024.findings-emnlp.877}
-}</div>
-        </article>
-
-        <!-- Paper 4: TREC 2024 RAG -->
+        <!-- 3. TREC 2024 Proceedings (November 2024) -->
         <article class="pub-card related" data-category="retrieval">
           <div class="pub-meta-top">
             <span class="pub-badge trec">TREC 2024 Proceedings</span>
-            <span class="pub-year">2024 • NIST, Gaithersburg, MD, USA</span>
+            <span class="pub-year">November 2024 • NIST, Gaithersburg, MD, USA</span>
           </div>
           <h3 class="pub-title">
             CIR at TREC 2024 RAG: Task 2 – Augmented Generation with Diversified Segments and Knowledge Adaption
@@ -622,9 +768,12 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
           <p class="pub-venue">
             In The Thirty-Third Text REtrieval Conference Proceedings (TREC 2024), National Institute of Standards and Technology (NIST SP 1329).
           </p>
+          <div class="pub-summary">
+            Explores diversified passage segmentation, knowledge adaptation strategies, and retrieval-augmented generation architectures evaluated across the NIST TREC 2024 RAG track.
+          </div>
           <div class="pub-actions">
             <a href="https://trec.nist.gov/pubs/trec33/papers/CIR.rag.pdf" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>NIST Proceedings PDF</span> &rarr;
+              <span>NIST Proceedings PDF</span>
             </a>
             <button class="pub-link-btn" onclick="toggleBibtex('bib-trec24', this)" style="cursor: pointer; background: white;">
               BibTeX
@@ -640,11 +789,47 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
 }</div>
         </article>
 
-        <!-- Paper 5: ACL 2024 Findings (BATS) -->
+        <!-- 4. EMNLP 2024 Findings (November 2024) -->
+        <article class="pub-card related" data-category="simplicity">
+          <div class="pub-meta-top">
+            <span class="pub-badge" style="background-color: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0;">EMNLP 2024 Findings</span>
+            <span class="pub-year">November 2024 • Miami, Florida, USA</span>
+          </div>
+          <h3 class="pub-title">
+            ARTS: Assessing Readability &amp; Text Simplicity
+          </h3>
+          <p class="pub-authors">
+            Björn Engelmann, Christoph K. Kreutz, Fabian Haak, and Philipp Schaer
+          </p>
+          <p class="pub-venue">
+            In Findings of the Association for Computational Linguistics: EMNLP 2024, pages 14925–14942, Miami, Florida, USA: Association for Computational Linguistics. DOI: 10.18653/v1/2024.findings-emnlp.877
+          </p>
+          <div class="pub-summary">
+            A comprehensive multi-metric evaluation framework and benchmark dataset for assessing automated text readability, syntactic simplicity, and lexical accessibility in scholarly communication.
+          </div>
+          <div class="pub-actions">
+            <a href="https://doi.org/10.18653/v1/2024.findings-emnlp.877" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>ACL Anthology</span>
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-arts24', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-arts24" class="bibtex-box">@inproceedings{engelmann2024arts,
+  author    = {Engelmann, Bj{\"o}rn and Kreutz, Christoph K. and Haak, Fabian and Schaer, Philipp},
+  title     = {ARTS: Assessing Readability \& Text Simplicity},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages     = {14925--14942},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-emnlp.877}
+}</div>
+        </article>
+
+        <!-- 5. ACL 2024 Findings (August 2024) -->
         <article class="pub-card related" data-category="simplicity">
           <div class="pub-meta-top">
             <span class="pub-badge" style="background-color: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0;">ACL 2024 Findings</span>
-            <span class="pub-year">2024 • Bangkok, Thailand</span>
+            <span class="pub-year">August 2024 • Bangkok, Thailand</span>
           </div>
           <h3 class="pub-title">
             BATS: BenchmArking Text Simplicity 🦇
@@ -655,9 +840,12 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
           <p class="pub-venue">
             In Findings of the Association for Computational Linguistics: ACL 2024, pages 11968–11989, Bangkok, Thailand: Association for Computational Linguistics. DOI: 10.18653/v1/2024.findings-acl.712
           </p>
+          <div class="pub-summary">
+            A standardized benchmarking suite for evaluating automated text simplification systems, analyzing syntactic-lexical transformations and preservation of scientific meaning.
+          </div>
           <div class="pub-actions">
             <a href="https://doi.org/10.18653/v1/2024.findings-acl.712" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>ACL Anthology</span> &rarr;
+              <span>ACL Anthology</span>
             </a>
             <button class="pub-link-btn" onclick="toggleBibtex('bib-bats24', this)" style="cursor: pointer; background: white;">
               BibTeX
@@ -673,39 +861,7 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
 }</div>
         </article>
 
-        <!-- Paper 6: Text Simplification Preprint 2023 -->
-        <article class="pub-card related" data-category="simplicity">
-          <div class="pub-meta-top">
-            <span class="pub-badge pre">Preprint</span>
-            <span class="pub-year">2023</span>
-          </div>
-          <h3 class="pub-title">
-            Text Simplification of Scientific Texts for Non-Expert Readers
-          </h3>
-          <p class="pub-authors">
-            Björn Engelmann, Fabian Haak, Christoph K. Kreutz, Nastaran Nikzad Khasmakhi, and Philipp Schaer
-          </p>
-          <p class="pub-venue">
-            Preprint available on arXiv:2307.03569 [cs.CL].
-          </p>
-          <div class="pub-actions">
-            <a href="https://arxiv.org/abs/2307.03569" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>ArXiv Preprint</span> &rarr;
-            </a>
-            <button class="pub-link-btn" onclick="toggleBibtex('bib-simpl23', this)" style="cursor: pointer; background: white;">
-              BibTeX
-            </button>
-          </div>
-          <div id="bib-simpl23" class="bibtex-box">@article{engelmann2023text,
-  author    = {Engelmann, Bj{\"o}rn and Haak, Fabian and Kreutz, Christoph K. and Khasmakhi, Nastaran Nikzad and Schaer, Philipp},
-  title     = {Text Simplification of Scientific Texts for Non-Expert Readers},
-  journal   = {arXiv preprint arXiv:2307.03569},
-  year      = {2023},
-  url       = {https://arxiv.org/abs/2307.03569}
-}</div>
-        </article>
-
-        <!-- Paper 7: Wolff et al. NSLP 2024 -->
+        <!-- 6. NSLP 2024 / Springer (2024) -->
         <article class="pub-card related" data-category="kg">
           <div class="pub-meta-top">
             <span class="pub-badge nslp">NSLP 2024 / Springer</span>
@@ -721,9 +877,12 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
           <p class="pub-venue">
             In International Workshop on Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024), Communications in Computer and Information Science, Springer Nature Switzerland, pages 234–243. DOI: 10.1007/978-3-031-65794-8_16
           </p>
+          <div class="pub-summary">
+            Investigates the incorporation of domain knowledge graph metadata into BERT embeddings to enhance automated publication classification in the ZB MED Knowledge Environment.
+          </div>
           <div class="pub-actions">
             <a href="https://link.springer.com/chapter/10.1007/978-3-031-65794-8_16" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
-              <span>Springer Link</span> &rarr;
+              <span>Springer Link</span>
             </a>
             <button class="pub-link-btn" onclick="toggleBibtex('bib-wolff2024', this)" style="cursor: pointer; background: white;">
               BibTeX
@@ -737,6 +896,41 @@ print(<span style="color: #a5d6ff;">f"Revitalized </span>{len(judgments)}<span s
   year      = {2024},
   publisher = {Springer Nature Switzerland},
   doi       = {10.1007/978-3-031-65794-8_16}
+}</div>
+        </article>
+
+        <!-- 7. Text Simplification Preprint (July 2023) -->
+        <article class="pub-card related" data-category="simplicity">
+          <div class="pub-meta-top">
+            <span class="pub-badge pre">Preprint</span>
+            <span class="pub-year">July 2023 • ArXiv</span>
+          </div>
+          <h3 class="pub-title">
+            Text Simplification of Scientific Texts for Non-Expert Readers
+          </h3>
+          <p class="pub-authors">
+            Björn Engelmann, Fabian Haak, Christoph K. Kreutz, Nastaran Nikzad Khasmakhi, and Philipp Schaer
+          </p>
+          <p class="pub-venue">
+            Preprint available on arXiv:2307.03569 [cs.CL].
+          </p>
+          <div class="pub-summary">
+            Investigates methods to adapt dense scientific prose into accessible, non-expert representations while preserving core factual findings and empirical validity.
+          </div>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/abs/2307.03569" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>ArXiv Preprint</span>
+            </a>
+            <button class="pub-link-btn" onclick="toggleBibtex('bib-simpl23', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="bib-simpl23" class="bibtex-box">@article{engelmann2023text,
+  author    = {Engelmann, Bj{\"o}rn and Haak, Fabian and Kreutz, Christoph K. and Khasmakhi, Nastaran Nikzad and Schaer, Philipp},
+  title     = {Text Simplification of Scientific Texts for Non-Expert Readers},
+  journal   = {arXiv preprint arXiv:2307.03569},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2307.03569}
 }</div>
         </article>
       </div>

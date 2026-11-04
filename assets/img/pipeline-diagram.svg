@@ -24,7 +24,11 @@
     <text x="14" y="24" class="mono-title">01 / Acquisition</text>
     
     <text x="14" y="65" class="box-desc" font-weight="700" fill="#1b4544">530,000+ Preprints</text>
-    <text x="14" y="85" class="box-desc">Automated ingestion from 30+ servers: bioRxiv, medRxiv, OSF, PsyArXiv, etc.</text>
+    <text x="14" y="82" class="box-desc">
+      <tspan x="14" dy="0">Automated ingestion from</tspan>
+      <tspan x="14" dy="15">30+ servers: bioRxiv,</tspan>
+      <tspan x="14" dy="15">medRxiv, OSF archives.</tspan>
+    </text>
     
     <!-- Feature tags -->
     <rect x="14" y="145" width="162" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
@@ -51,7 +55,11 @@
     <text x="14" y="24" class="mono-title">02 / Multimodal VLM</text>
 
     <text x="14" y="65" class="box-desc" font-weight="700" fill="#611d51">REANIMATOR-VLM</text>
-    <text x="14" y="85" class="box-desc">Deep PDF parsing using Vision-Language Models &amp; Docling, bypassing rigid legacy rule systems.</text>
+    <text x="14" y="82" class="box-desc">
+      <tspan x="14" dy="0">Deep PDF parsing using Vision-</tspan>
+      <tspan x="14" dy="15">Language Models &amp; Docling,</tspan>
+      <tspan x="14" dy="15">replacing rigid legacy rules.</tspan>
+    </text>
 
     <!-- Sub-elements -->
     <rect x="14" y="130" width="202" height="24" rx="4" fill="#ffffff" stroke="#e3bcdb" />
@@ -81,7 +89,11 @@
     <text x="14" y="24" class="mono-title">03 / Synthetic IR</text>
 
     <text x="14" y="65" class="box-desc" font-weight="700" fill="#524818">Revitalized Collections</text>
-    <text x="14" y="85" class="box-desc">Automated, reproducible relevance assessment using LLMs (UMBRELA framework) validated against expert annotations.</text>
+    <text x="14" y="82" class="box-desc">
+      <tspan x="14" dy="0">Reproducible relevance grading</tspan>
+      <tspan x="14" dy="15">via LLMs (UMBRELA framework)</tspan>
+      <tspan x="14" dy="15">benchmarked with experts.</tspan>
+    </text>
 
     <rect x="14" y="145" width="192" height="26" rx="4" fill="#ffffff" stroke="#e4dec0" />
     <text x="22" y="162" class="tech-pill" fill="#877A37">TREC-COVID+ Benchmark</text>
@@ -107,7 +119,11 @@
     <text x="14" y="24" class="mono-title">04 / Knowledge Integration &amp; RAG</text>
 
     <text x="14" y="65" class="box-desc" font-weight="700" fill="#1b4544">ZB MED KE &amp; RAG Demonstrator</text>
-    <text x="14" y="85" class="box-desc">Homogenization in ZB MED Knowledge Environment, semantically enriched embeddings, and a usable RAG demonstrator for preprints &amp; LIVIVO.</text>
+    <text x="14" y="82" class="box-desc">
+      <tspan x="14" dy="0">Homogenization in ZB MED KE, enriched</tspan>
+      <tspan x="14" dy="15">BERT embeddings, and a usable RAG</tspan>
+      <tspan x="14" dy="15">demonstrator for preprints and LIVIVO.</tspan>
+    </text>
 
     <rect x="14" y="130" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
     <text x="22" y="147" class="tech-pill" fill="#388786">ZB MED KE Knowledge Graph &amp; APIs</text>
@@ -124,4 +140,3 @@
     <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">ZB MED &amp; CIR TH Köln • 2024–2027</text>
   </g>
 </svg>
-
