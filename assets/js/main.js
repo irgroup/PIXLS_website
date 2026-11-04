@@ -105,5 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // 6. Toggle Blog Post full content
+  window.toggleBlog = function(postId, buttonEl) {
+    const postBox = document.getElementById(postId);
+    if (!postBox) return;
+
+    const isShown = postBox.classList.toggle('show');
+    buttonEl.innerText = isShown ? 'Show Less ↑' : 'Read Full Post →';
+  };
 });
 

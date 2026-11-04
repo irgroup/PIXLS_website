@@ -1,44 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" fill="none" role="img" aria-label="PIXLS Project Logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" fill="none" role="img" aria-label="PIXLS Logo">
   <defs>
     <style>
-      .brand-box { rx: 6px; }
-      .brand-text { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 42px; fill: #ffffff; letter-spacing: -0.5px; }
-      .sub-text { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 10.5px; fill: #2b3a39; letter-spacing: 1.8px; text-transform: uppercase; }
-      .accent-dot { fill: #873774; }
+      .brand-box { rx: 5px; }
+      .brand-text { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 38px; fill: #ffffff; letter-spacing: 2px; }
     </style>
   </defs>
   
-  <!-- Left Graphic Emblem: Monolithic structured data block -->
-  <g transform="translate(0, 10)">
+  <!-- Left Graphic Emblem: Monolithic structured data blocks -->
+  <g transform="translate(0, 4)">
     <!-- Base block 1 (Teal) -->
-    <rect class="brand-box" x="0" y="0" width="32" height="32" fill="#388786" />
-    <path d="M9 16H23M16 9V23" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    <rect class="brand-box" x="0" y="0" width="26" height="26" fill="#388786" />
+    <path d="M7 13H19M13 7V19" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
     
     <!-- Base block 2 (Olive) -->
-    <rect class="brand-box" x="38" y="0" width="32" height="32" fill="#877A37" />
-    <circle cx="54" cy="16" r="6" fill="#ffffff" />
+    <rect class="brand-box" x="30" y="0" width="26" height="26" fill="#877A37" />
+    <circle cx="43" cy="13" r="5" fill="#ffffff" />
     
     <!-- Base block 3 (Berry) -->
-    <rect class="brand-box" x="0" y="38" width="32" height="32" fill="#873774" />
-    <rect x="7" y="47" width="18" height="14" rx="2" fill="none" stroke="#ffffff" stroke-width="2.5" />
-    <line x1="7" y1="54" x2="25" y2="54" stroke="#ffffff" stroke-width="2" />
+    <rect class="brand-box" x="0" y="30" width="26" height="26" fill="#873774" />
+    <rect x="6" y="37" width="14" height="11" rx="1.5" fill="none" stroke="#ffffff" stroke-width="2" />
+    <line x1="6" y1="42.5" x2="20" y2="42.5" stroke="#ffffff" stroke-width="1.8" />
     
-    <!-- Base block 4 (Teal Darker / Modern accent) -->
-    <rect class="brand-box" x="38" y="38" width="32" height="32" fill="#255a59" />
-    <path d="M46 60L54 46L62 60" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Base block 4 (Dark Teal accent) -->
+    <rect class="brand-box" x="30" y="30" width="26" height="26" fill="#255a59" />
+    <path d="M37 47L43 37L49 47" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
   </g>
   
   <!-- Main Typographic Brand Wordmark -->
-  <g transform="translate(86, 0)">
-    <!-- Monolithic container for title -->
-    <rect x="0" y="8" width="220" height="48" rx="4" fill="#388786" />
-    <text x="18" y="45" class="brand-text">P I X L S</text>
-    <rect x="226" y="8" width="12" height="48" rx="2" fill="#877A37" />
-    <rect x="242" y="8" width="12" height="48" rx="2" fill="#873774" />
-    
-    <!-- Subtitle tagline -->
-    <text x="2" y="74" class="sub-text">PREPRINT INFORMATION EXTRACTION</text>
-    <text x="2" y="86" class="sub-text" fill="#388786" style="font-weight: 700; fill: #388786;">FOR LIFE SCIENCES</text>
+  <g transform="translate(74, 4)">
+    <rect x="0" y="4" width="210" height="48" rx="4" fill="#388786" />
+    <text x="18" y="39" class="brand-text">P I X L S</text>
+    <rect x="216" y="4" width="12" height="48" rx="2" fill="#877A37" />
+    <rect x="232" y="4" width="12" height="48" rx="2" fill="#873774" />
   </g>
 </svg>
-

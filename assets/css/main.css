@@ -1275,6 +1275,182 @@ section {
    RESPONSIVE DESIGN (Tablets & Mobile)
    ========================================================================== */
 
+/* ==========================================================================
+   BLOG & UPDATES SECTION
+   ========================================================================== */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.75rem;
+}
+
+.blog-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.blog-card.featured {
+  border-left: 5px solid var(--color-primary);
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-surface) 100px);
+}
+
+.blog-card.poster-card {
+  border-left: 5px solid var(--color-gold);
+  background: linear-gradient(180deg, var(--color-gold-light) 0%, var(--color-surface) 100px);
+}
+
+.blog-card.tool-card {
+  border-left: 5px solid var(--color-berry);
+  background: linear-gradient(180deg, var(--color-berry-light) 0%, var(--color-surface) 100px);
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.blog-date {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.blog-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.blog-excerpt {
+  font-size: 0.93rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.blog-full-content {
+  display: none;
+  font-size: 0.92rem;
+  color: var(--color-text-main);
+  line-height: 1.65;
+  padding-top: 0.85rem;
+  margin-top: 0.85rem;
+  border-top: 1px dashed var(--color-border-subtle);
+}
+
+.blog-full-content.show {
+  display: block;
+}
+
+.blog-full-content p {
+  margin-bottom: 0.75rem;
+}
+
+.blog-full-content ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.blog-full-content li {
+  margin-bottom: 0.35rem;
+}
+
+.blog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.btn-read-more {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.15s ease;
+}
+
+.btn-read-more:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Tool cards grid for Codeberg artifacts */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tool-artifact-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-artifact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-primary);
+}
+
+.tool-artifact-card .artifact-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.tool-artifact-card .artifact-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.tool-artifact-card .artifact-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
 @media (max-width: 992px) {
   .hero-content {
     grid-template-columns: 1fr;

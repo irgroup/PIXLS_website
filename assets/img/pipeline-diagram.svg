@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 340" fill="none" role="img" aria-label="PIXLS System Architecture Diagram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 340" fill="none" role="img" aria-label="PIXLS Modular Research Architecture Diagram">
   <defs>
     <style>
       .mono-title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; fill: #ffffff; text-transform: uppercase; }
@@ -36,7 +36,7 @@
     <rect x="14" y="215" width="162" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
     <text x="24" y="232" class="tech-pill" fill="#388786">Continuous REST APIs</text>
     
-    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">Work Package 1 (ZB MED)</text>
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">ZB MED • Continuous Since 2023</text>
   </g>
 
   <!-- Arrow 1 -> 2 -->
@@ -66,7 +66,7 @@
     <rect x="14" y="220" width="202" height="24" rx="4" fill="#ffffff" stroke="#e3bcdb" />
     <text x="22" y="236" class="tech-pill" fill="#873774">● dots.mocr / dots.ocr Powered</text>
 
-    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#7a426f">Work Package 2 (TH Köln)</text>
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#7a426f">CIR TH Köln • 2023–2026</text>
   </g>
 
   <!-- Arrow 2 -> 3 -->
@@ -92,7 +92,7 @@
     <rect x="14" y="215" width="192" height="26" rx="4" fill="#ffffff" stroke="#e4dec0" />
     <text x="22" y="232" class="tech-pill" fill="#877A37">SIGIR '25 Methodology</text>
 
-    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#756b35">Work Package 5 (TH Köln)</text>
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#756b35">CIR TH Köln • 2024–2027</text>
   </g>
 
   <!-- Arrow 3 -> 4 -->
@@ -121,7 +121,7 @@
     <rect x="14" y="235" width="282" height="26" rx="4" fill="#ffffff" stroke="#c2e2e1" />
     <text x="22" y="252" class="tech-pill" fill="#873774">FAIR Data &amp; Open Science Releases</text>
 
-    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">Work Packages 3 &amp; 4 (ZB MED / CIR TH Köln)</text>
+    <text x="14" y="275" font-family="'JetBrains Mono', monospace" font-size="9.5px" fill="#5b7877">ZB MED &amp; CIR TH Köln • 2024–2027</text>
   </g>
 </svg>
 

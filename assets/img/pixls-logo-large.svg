@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 100" fill="none" role="img" aria-label="PIXLS Large Logo">
+  <defs>
+    <style>
+      .brand-box { rx: 6px; }
+      .brand-text-lg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 42px; fill: #ffffff; letter-spacing: 2px; }
+      .sub-text-lg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 11px; fill: #2b3a39; letter-spacing: 2.2px; text-transform: uppercase; }
+    </style>
+  </defs>
+  
+  <g transform="translate(0, 10)">
+    <rect class="brand-box" x="0" y="0" width="36" height="36" fill="#388786" />
+    <path d="M10 18H26M18 10V26" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    <rect class="brand-box" x="42" y="0" width="36" height="36" fill="#877A37" />
+    <circle cx="60" cy="18" r="6" fill="#ffffff" />
+    <rect class="brand-box" x="0" y="42" width="36" height="36" fill="#873774" />
+    <rect x="8" y="52" width="20" height="16" rx="2" fill="none" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="8" y1="60" x2="28" y2="60" stroke="#ffffff" stroke-width="2" />
+    <rect class="brand-box" x="42" y="42" width="36" height="36" fill="#255a59" />
+    <path d="M51 66L60 52L69 66" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  
+  <g transform="translate(96, 6)">
+    <rect x="0" y="4" width="230" height="52" rx="4" fill="#388786" />
+    <text x="20" y="42" class="brand-text-lg">P I X L S</text>
+    <rect x="238" y="4" width="14" height="52" rx="2" fill="#877A37" />
+    <rect x="256" y="4" width="14" height="52" rx="2" fill="#873774" />
+    <text x="4" y="78" class="sub-text-lg">PREPRINT INFORMATION EXTRACTION</text>
+    <text x="4" y="93" class="sub-text-lg" style="font-weight: 700; fill: #388786;">FOR LIFE SCIENCES</text>
+  </g>
+</svg>
