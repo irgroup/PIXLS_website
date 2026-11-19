@@ -192,33 +192,49 @@ img, svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .nav-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
   text-decoration: none;
 }
 
 .nav-brand-mark {
   height: 40px;
   width: auto;
+  display: block;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 1.75rem;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.95rem;
+  line-height: 1;
   color: var(--color-text-main);
   letter-spacing: 0.2px;
-  padding: 0.35rem 0.15rem;
+  padding: 0.5rem 0.15rem;
+  white-space: nowrap;
   position: relative;
 }
 
@@ -244,6 +260,7 @@ img, svg {
 .nav-actions {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 0.75rem;
 }
 
@@ -251,10 +268,11 @@ img, svg {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.45rem 1rem;
+  padding: 0.5rem 1rem;
   font-family: var(--font-display);
   font-size: 0.88rem;
   font-weight: 600;
+  line-height: 1;
   border-radius: 40px;
   border: 1.5px solid var(--color-primary);
   color: var(--color-primary);
@@ -285,6 +303,17 @@ img, svg {
 
 .btn-pill.berry:hover {
   background-color: var(--color-berry);
+  color: var(--color-white);
+}
+
+.btn-pill.gold {
+  border-color: var(--color-gold);
+  color: var(--color-gold-dark);
+}
+
+.btn-pill.gold:hover {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
   color: var(--color-white);
 }
 
@@ -402,6 +431,16 @@ img, svg {
 
 .btn-solid-monolith.berry:hover {
   box-shadow: 5px 5px 0 var(--color-berry-dark);
+}
+
+.btn-solid-monolith.gold {
+  background-color: var(--color-gold);
+  box-shadow: 3px 3px 0 var(--color-gold-dark);
+}
+
+.btn-solid-monolith.gold:hover {
+  background-color: var(--color-gold-dark);
+  box-shadow: 5px 5px 0 var(--color-gold-text);
 }
 
 .hero-metrics-bar {
@@ -1102,6 +1141,18 @@ section {
   color: var(--color-white);
 }
 
+.pub-link-btn.gold {
+  background: var(--color-gold-light);
+  border-color: var(--color-gold-border);
+  color: var(--color-gold-dark);
+}
+
+.pub-link-btn.gold:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
 .bibtex-box {
   display: none;
   margin-top: 1rem;
@@ -1260,6 +1311,16 @@ section {
   color: var(--color-text-main);
 }
 
+.organizer-name a {
+  color: var(--color-text-main);
+  text-decoration: none;
+}
+
+.organizer-name a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 .organizer-role {
   font-size: 0.82rem;
   color: var(--color-text-muted);
@@ -1270,6 +1331,16 @@ section {
   font-size: 0.78rem;
   color: var(--color-primary);
   margin-top: 0.25rem;
+}
+
+.organizer-inst a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.organizer-inst a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -1371,6 +1442,19 @@ section {
 .link-tag:hover {
   background: var(--color-primary);
   color: var(--color-white);
+}
+
+.link-tag.gold {
+  font-weight: 700;
+  background: var(--color-gold-light);
+  color: var(--color-gold-dark);
+  border: 1px solid var(--color-gold-border);
+}
+
+.link-tag.gold:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+  border-color: var(--color-gold);
 }
 
 /* ==========================================================================
