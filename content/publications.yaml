@@ -1,0 +1,197 @@
+heading: "Publications & Dissemination"
+lead: "Peer-reviewed articles, conference proceedings, and benchmarks directly originating from or closely aligned with the PIXLS project scope, sorted chronologically."
+
+filters:
+  - key: "all"
+    label: "All Contributions"
+  - key: "retrieval"
+    label: "Retrieval & Extraction"
+  - key: "simplicity"
+    label: "Text Readability & Simplicity"
+  - key: "kg"
+    label: "Knowledge & Classification"
+
+# Entries are automatically sorted by `date` (YYYY-MM) descending during build.
+publications:
+  - id: "bib-season26"
+    date: "2026-03"
+    display_date: "March 16–18, 2026 • Cologne, Germany"
+    category: "retrieval"
+    tier: "core-pixls"
+    badge: "SEASON 2026 Poster"
+    badge_style: "gold"
+    tag: "REANIMATOR Sample Case"
+    tag_color: "gold"
+    title: "Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics"
+    authors: "Fabian Haak and Philipp Schaer"
+    venue: "Poster presented at the Conference on Search Engines and Society (SEASON 2026), Cologne, Germany. DOI: [10.6084/m9.figshare.34912698](https://doi.org/10.6084/m9.figshare.34912698)"
+    summary: "Large-scale empirical meta-science study parsing 7,676 bioRxiv preprints with REANIMATOR to identify multimodal, structural, and linguistic drivers of peer-reviewed publication conversion and venue prestige. Detailed findings are discussed in our [Project Blog](#blog-post-1)."
+    links:
+      - label: "Figshare Poster (DOI)"
+        href: "https://doi.org/10.6084/m9.figshare.34912698"
+        style: "gold"
+      - label: "SEASON 2026 Programme"
+        href: "https://searchenginesandsociety.net/season-2026/programme/"
+      - label: "Google Scholar"
+        href: "https://scholar.google.com/citations?user=EqACv2QAAAAJ"
+    bibtex: |
+      @misc{haak2026revealing,
+        author       = {Haak, Fabian and Schaer, Philipp},
+        title        = {Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics},
+        howpublished = {Poster presented at Search Engines and Society (SEASON 2026), Cologne, Germany},
+        year         = {2026},
+        doi          = {10.6084/m9.figshare.34912698},
+        url          = {https://doi.org/10.6084/m9.figshare.34912698}
+      }
+
+  - id: "bib-sigir25"
+    date: "2025-07"
+    display_date: "July 13–18, 2025 • Padua, Italy"
+    category: "retrieval"
+    tier: "core-pixls"
+    badge: "ACM SIGIR 2025"
+    badge_style: "sigir"
+    tag: "Core PIXLS Framework"
+    tag_color: "berry"
+    title: "REANIMATOR: Reanimate Retrieval Test Collections with Extracted and Synthetic Resources"
+    authors: "Björn Engelmann, Fabian Haak, Philipp Schaer, Mani Erfanian Abdoust, Linus Netze, and Meik Bittkowski"
+    venue: "In Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25). ACM, New York, NY, USA, 11 pages. DOI: 10.1145/3726302.3730342"
+    summary: "Introduces the REANIMATOR framework for automated multimodal extraction (tables, in-text citation links) and synthetic LLM relevance assessment (UMBRELA), establishing the revitalized TREC-COVID+ benchmark for multimodal RAG."
+    links:
+      - label: "ArXiv Preprint"
+        href: "https://arxiv.org/abs/2504.07584"
+      - label: "ACM Digital Library"
+        href: "https://doi.org/10.1145/3726302.3730342"
+      - label: "GitHub Code"
+        href: "https://github.com/irgroup/Reanimator"
+    bibtex: |
+      @inproceedings{engelmann2025reanimator,
+        author    = {Engelmann, Bj{\"o}rn and Haak, Fabian and Schaer, Philipp and Abdoust, Mani Erfanian and Netze, Linus and Bittkowski, Meik},
+        title     = {REANIMATOR: Reanimate Retrieval Test Collections with Extracted and Synthetic Resources},
+        booktitle = {Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25)},
+        year      = {2025},
+        doi       = {10.1145/3726302.3730342},
+        url       = {https://arxiv.org/abs/2504.07584}
+      }
+
+  - id: "bib-trec24"
+    date: "2024-11"
+    display_date: "November 2024 • NIST, Gaithersburg, MD, USA"
+    category: "retrieval"
+    tier: "related"
+    badge: "TREC 2024 Proceedings"
+    badge_style: "trec"
+    title: "CIR at TREC 2024 RAG: Task 2 – Augmented Generation with Diversified Segments and Knowledge Adaption"
+    authors: "Jan Keller, Björn Engelmann, Fabian Haak, Philipp Schaer, Hermann Kroll, and Christoph K. Kreutz"
+    venue: "In The Thirty-Third Text REtrieval Conference Proceedings (TREC 2024), National Institute of Standards and Technology (NIST SP 1329)."
+    summary: "Explores diversified passage segmentation, knowledge adaptation strategies, and retrieval-augmented generation architectures evaluated across the NIST TREC 2024 RAG track."
+    links:
+      - label: "NIST Proceedings PDF"
+        href: "https://trec.nist.gov/pubs/trec33/papers/CIR.rag.pdf"
+    bibtex: |
+      @inproceedings{keller2024cir,
+        author    = {Keller, Jan and Engelmann, Bj{\"o}rn and Haak, Fabian and Schaer, Philipp and Kroll, Hermann and Kreutz, Christoph K.},
+        title     = {CIR at TREC 2024 RAG: Task 2 - Augmented Generation with Diversified Segments and Knowledge Adaption},
+        booktitle = {The Thirty-Third Text REtrieval Conference Proceedings (TREC 2024)},
+        series    = {NIST Special Publication 1329},
+        year      = {2024},
+        url       = {https://trec.nist.gov/pubs/trec33/papers/CIR.rag.pdf}
+      }
+
+  - id: "bib-arts24"
+    date: "2024-11"
+    display_date: "November 2024 • Miami, Florida, USA"
+    category: "simplicity"
+    tier: "related"
+    badge: "EMNLP 2024 Findings"
+    badge_style: "neutral"
+    title: "ARTS: Assessing Readability & Text Simplicity"
+    authors: "Björn Engelmann, Christoph K. Kreutz, Fabian Haak, and Philipp Schaer"
+    venue: "In Findings of the Association for Computational Linguistics: EMNLP 2024, pages 14925–14942, Miami, Florida, USA: Association for Computational Linguistics. DOI: 10.18653/v1/2024.findings-emnlp.877"
+    summary: "A comprehensive multi-metric evaluation framework and benchmark dataset for assessing automated text readability, syntactic simplicity, and lexical accessibility in scholarly communication."
+    links:
+      - label: "ACL Anthology"
+        href: "https://doi.org/10.18653/v1/2024.findings-emnlp.877"
+    bibtex: |
+      @inproceedings{engelmann2024arts,
+        author    = {Engelmann, Bj{\"o}rn and Kreutz, Christoph K. and Haak, Fabian and Schaer, Philipp},
+        title     = {ARTS: Assessing Readability \& Text Simplicity},
+        booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+        pages     = {14925--14942},
+        year      = {2024},
+        doi       = {10.18653/v1/2024.findings-emnlp.877}
+      }
+
+  - id: "bib-bats24"
+    date: "2024-08"
+    display_date: "August 2024 • Bangkok, Thailand"
+    category: "simplicity"
+    tier: "related"
+    badge: "ACL 2024 Findings"
+    badge_style: "neutral"
+    title: "BATS: BenchmArking Text Simplicity 🦇"
+    authors: "Christoph K. Kreutz, Fabian Haak, Björn Engelmann, and Philipp Schaer"
+    venue: "In Findings of the Association for Computational Linguistics: ACL 2024, pages 11968–11989, Bangkok, Thailand: Association for Computational Linguistics. DOI: 10.18653/v1/2024.findings-acl.712"
+    summary: "A standardized benchmarking suite for evaluating automated text simplification systems, analyzing syntactic-lexical transformations and preservation of scientific meaning."
+    links:
+      - label: "ACL Anthology"
+        href: "https://doi.org/10.18653/v1/2024.findings-acl.712"
+    bibtex: |
+      @inproceedings{kreutz2024bats,
+        author    = {Kreutz, Christoph K. and Haak, Fabian and Engelmann, Bj{\"o}rn and Schaer, Philipp},
+        title     = {BATS: BenchmArking Text Simplicity},
+        booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
+        pages     = {11968--11989},
+        year      = {2024},
+        doi       = {10.18653/v1/2024.findings-acl.712}
+      }
+
+  - id: "bib-wolff2024"
+    date: "2024-05"
+    display_date: "2024 • Cham, Switzerland"
+    category: "kg"
+    tier: "related"
+    badge: "NSLP 2024 / Springer"
+    badge_style: "nslp"
+    tag: "ZB MED KE"
+    tag_color: "gold"
+    title: "Enriched BERT Embeddings for Scholarly Publication Classification"
+    authors: "Benjamin Wolff, Eva Seidlmayer, and Konrad U. Förstner"
+    venue: "In International Workshop on Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024), Communications in Computer and Information Science, Springer Nature Switzerland, pages 234–243. DOI: 10.1007/978-3-031-65794-8_16"
+    summary: "Investigates the incorporation of domain knowledge graph metadata into BERT embeddings to enhance automated publication classification in the ZB MED Knowledge Environment."
+    links:
+      - label: "Springer Link"
+        href: "https://link.springer.com/chapter/10.1007/978-3-031-65794-8_16"
+    bibtex: |
+      @inproceedings{wolff2024enriched,
+        author    = {Wolff, Benjamin and Seidlmayer, Eva and F{\"o}rstner, Konrad U.},
+        title     = {Enriched BERT Embeddings for Scholarly Publication Classification},
+        booktitle = {Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024)},
+        pages     = {234--243},
+        year      = {2024},
+        publisher = {Springer Nature Switzerland},
+        doi       = {10.1007/978-3-031-65794-8_16}
+      }
+
+  - id: "bib-simpl23"
+    date: "2023-07"
+    display_date: "July 2023 • ArXiv"
+    category: "simplicity"
+    tier: "related"
+    badge: "Preprint"
+    badge_style: "pre"
+    title: "Text Simplification of Scientific Texts for Non-Expert Readers"
+    authors: "Björn Engelmann, Fabian Haak, Christoph K. Kreutz, Nastaran Nikzad Khasmakhi, and Philipp Schaer"
+    venue: "Preprint available on arXiv:2307.03569 [cs.CL]."
+    summary: "Investigates methods to adapt dense scientific prose into accessible, non-expert representations while preserving core factual findings and empirical validity."
+    links:
+      - label: "ArXiv Preprint"
+        href: "https://arxiv.org/abs/2307.03569"
+    bibtex: |
+      @article{engelmann2023text,
+        author    = {Engelmann, Bj{\"o}rn and Haak, Fabian and Kreutz, Christoph K. and Khasmakhi, Nastaran Nikzad and Schaer, Philipp},
+        title     = {Text Simplification of Scientific Texts for Non-Expert Readers},
+        journal   = {arXiv preprint arXiv:2307.03569},
+        year      = {2023},
+        url       = {https://arxiv.org/abs/2307.03569}
+      }

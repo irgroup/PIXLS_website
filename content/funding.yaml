@@ -1,0 +1,18 @@
+logo: "assets/img/dfg-logo.svg"
+logo_alt: "Gefördert durch die Deutsche Forschungsgemeinschaft (DFG)"
+title: "DFG Funding & Project Metadata"
+description: 'This project is funded by the Deutsche Forschungsgemeinschaft (German Research Foundation) within the funding program *"Scientific Library Services and Information Systems" (LIS)*.'
+
+details:
+  - label: "Official Title"
+    value: "Preprint Information eXtraction for Life Sciences (PIXLS)"
+  - label: "DFG Project Number"
+    value: "**[492813820 (GEPRIS Entry →)](https://gepris.dfg.de/gepris/projekt/492813820)**"
+  - label: "Program"
+    value: "Scientific Library Services and Information Systems (LIS)"
+  - label: "Applicants"
+    value: "Prof. Dr. Philipp Schaer (TH Köln), Prof. Dr. Konrad U. Förstner (ZB MED)"
+  - label: "Project Period"
+    value: "01.01.2023 – 2027"
+  - label: "FAIR & Open Science"
+    value: "Open Source Toolkits (MIT), Open Access preprints, CC-BY Dissemination"

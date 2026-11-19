@@ -1,0 +1,61 @@
+eyebrow:
+  dfg_tag: "DFG Project 492813820"
+  period: "2023 – 2027"
+  domain_label: "Life Sciences IR"
+
+title_prefix: "Unlocking"
+title_highlight: "Preprint Knowledge"
+title_suffix: "in Life Sciences"
+
+subtitle: >
+  **PIXLS** (*Preprint Information eXtraction for Life Sciences*) is an interdisciplinary research project by **TH Köln** and **ZB MED**.
+  We bridge the gap between rapidly expanding preprint archives and deep machine readability through large-scale acquisition, Vision-Language Model extraction, synthetic relevance benchmarking, and practical discovery integration with [LIVIVO](https://www.livivo.de/).
+
+cta_buttons:
+  - label: "Explore REANIMATOR-VLM"
+    href: "#tools"
+    style: "teal"
+  - label: "Project Updates & Blog"
+    href: "#blog"
+    style: "berry"
+
+metrics:
+  - value: "530,000+"
+    color: "teal"
+    description: "Preprints continuously acquired across 30+ servers"
+  - value: "LIVIVO"
+    color: "gold"
+    description: "Discovery integration & practical RAG ([livivo.de →](https://www.livivo.de/))"
+  - value: "Multimodal"
+    color: "berry"
+    description: "Deep parsing of tables, figures, captions & context"
+
+cards:
+  - variant: "highlight-box"
+    badge: "Core Mission"
+    badge_color: "teal"
+    meta: "2023 – 2027"
+    title: "From Unstructured PDFs to Actionable Science"
+    body: >
+      Life science preprints provide vital research insights long before formal peer review. PIXLS liberates critical knowledge buried inside PDF tables, formulas, and diagrams, making it FAIR, structured, and semantically searchable for researchers worldwide.
+
+  - variant: "reanimator-box"
+    badge: "Toolkit Release"
+    badge_color: "berry"
+    meta: "v0.1.2 on PyPI"
+    title: "REANIMATOR-VLM"
+    body: >
+      Our completely rebuilt document parsing toolkit powered by Vision-Language Models (dots.mocr) for multi-modal element extraction and domain-independent synthetic relevance assessment.
+    links:
+      - label: "View on PyPI →"
+        href: "https://pypi.org/project/reanimator-vlm/"
+      - label: "pixls-preprints →"
+        href: "https://codeberg.org/pixls/pixls-preprints"
+
+  - variant: "gold-box"
+    badge: "Search & Discovery"
+    badge_color: "gold"
+    meta: "ZB MED Portal"
+    title: "LIVIVO Life Science Search"
+    body: >
+      Seamlessly integrating enriched preprint metadata and exploratory generative retrieval into [LIVIVO](https://www.livivo.de/), Germany's interdisciplinary discovery engine for medicine and life sciences.

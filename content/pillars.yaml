@@ -1,0 +1,51 @@
+heading: "Research Pillars"
+lead: "PIXLS structures its innovations across four collaborative pillars uniting the information retrieval expertise of TH Köln with the life sciences infrastructure of ZB MED."
+
+pillars:
+  - title: "Data Ingestion"
+    timeframe: "Since 2023"
+    card_color: ""
+    header_color: "teal"
+    description: >
+      An asynchronous, fault-tolerant ELT pipeline that continuously harvests preprints and structured metadata from over 30 international repositories using REST APIs with leaky-bucket rate limiting.
+    features:
+      - "530,000+ preprints ([bioRxiv](https://www.biorxiv.org/), [medRxiv](https://www.medrxiv.org/), [OSF](https://osf.io/preprints/))"
+      - "Open harvester: [`pixls-preprints`](https://codeberg.org/pixls/pixls-preprints)"
+      - "Staging area & automated test suite"
+      - "Operated on [ZB MED](https://www.zbmed.de/) infrastructure"
+
+  - title: "Multimodal Extraction"
+    timeframe: "2023 – 2026"
+    card_color: "berry"
+    header_color: "berry"
+    description: >
+      Deep multimodal document parsing of scientific PDFs using [Docling](https://github.com/DS4SD/docling) and Vision-Language Models (VLMs), extracting structured text, machine-readable tables, figures, captions, and in-text references.
+    features:
+      - "Powered by [`reanimator-vlm`](https://pypi.org/project/reanimator-vlm/) ([GitHub](https://github.com/irgroup/REANIMATOR-VLM))"
+      - "In-text reference contextualization"
+      - "Structured relational storage"
+      - "Independent of closed LLM APIs"
+
+  - title: "LIVIVO & Knowledge KE"
+    timeframe: "2024 – 2027"
+    card_color: "gold"
+    header_color: "gold"
+    description: >
+      Homogenization and persistent enrichment of preprint metadata in the [ZB MED Knowledge Environment](https://www.zbmed.de/) (KE), combined with semantically enriched BERT embeddings for discovery.
+    features:
+      - "Direct integration into **[LIVIVO Portal](https://www.livivo.de/)**"
+      - "Schema tool: [`livivo-converter`](https://codeberg.org/pixls/livivo-converter)"
+      - "Enriched embeddings ([NSLP '24](https://link.springer.com/chapter/10.1007/978-3-031-65794-8_16))"
+      - "FAIR metadata exposure via REST APIs"
+
+  - title: "Synthetic IR & RAG"
+    timeframe: "2024 – 2027"
+    card_color: ""
+    header_color: "dark-teal"
+    description: >
+      Revitalizing test collections using LLMs/VLMs for synthetic relevance judgments, demonstrating the empirical impact of tables on scientific RAG, and engineering usable RAG demonstrators for Preprints and LIVIVO.
+    features:
+      - "ACM SIGIR 2025 accepted framework ([Preprint](https://arxiv.org/abs/2504.07584))"
+      - "TREC-COVID+ multimodal benchmark"
+      - "ZB MED RAG demonstrator for Preprints & [LIVIVO](https://www.livivo.de/)"
+      - "[CIR team](https://ir.web.th-koeln.de/) focus on high-fidelity extraction"

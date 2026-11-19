@@ -1,0 +1,62 @@
+heading: "Participating Institutes & Team"
+lead: "PIXLS combines the information retrieval expertise of TH Köln with the life sciences infrastructure and data science capabilities of ZB MED."
+
+institutes:
+  - name: "TH Köln"
+    subtitle: "Cologne Information Retrieval Group (CIR)"
+    header_class: "th-koeln"
+    logos:
+      - src: "assets/img/cir-logo.svg"
+        alt: "CIR Emblem"
+      - src: "assets/img/th-koeln-emblem.svg"
+        alt: "TH Köln Emblem"
+    portal_label: "Team Website:"
+    portals:
+      - label: "ir.web.th-koeln.de →"
+        href: "https://ir.web.th-koeln.de/"
+        style: "teal"
+    members:
+      - name: "Prof. Dr. Philipp Schaer"
+        role: "Principal Investigator (Project Lead)"
+        links:
+          - label: "Google Scholar"
+            href: "https://scholar.google.com/citations?user=XTjmqCwAAAAJ"
+          - label: "ORCID: 0000-0002-8817-4632"
+            href: "https://orcid.org/0000-0002-8817-4632"
+      - name: "Fabian Haak, M.Sc."
+        role: "Research Associate & Doctoral Researcher"
+        links:
+          - label: "Google Scholar"
+            href: "https://scholar.google.com/citations?user=EqACv2QAAAAJ"
+          - label: "ORCID: 0000-0002-3392-7860"
+            href: "https://orcid.org/0000-0002-3392-7860"
+
+  - name: "ZB MED"
+    subtitle: "Information Centre for Life Sciences"
+    header_class: "zb-med"
+    logos:
+      - src: "assets/img/zbmed-emblem.svg"
+        alt: "ZB MED Emblem"
+    portal_label: "Portals:"
+    portals:
+      - label: "zbmed.de →"
+        href: "https://www.zbmed.de/"
+        style: "teal"
+      - label: "livivo.de →"
+        href: "https://www.livivo.de/"
+        style: "gold"
+    members:
+      - name: "Prof. Dr. Konrad U. Förstner"
+        role: "Principal Investigator (Project Lead)"
+        links:
+          - label: "Google Scholar"
+            href: "https://scholar.google.com/citations?user=n-GoW_IAAAAJ"
+          - label: "ORCID: 0000-0002-1481-2996"
+            href: "https://orcid.org/0000-0002-1481-2996"
+      - name: "Benjamin Wolff, M.Sc."
+        role: "Research Associate"
+        links:
+          - label: "Google Scholar"
+            href: "https://scholar.google.com/citations?hl=en&user=CqeS0DQAAAAJ"
+          - label: "ORCID: 0000-0001-9345-8958"
+            href: "https://orcid.org/0000-0001-9345-8958"

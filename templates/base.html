@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.og_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+
+  <!-- Google Fonts: Space Grotesk (Brand & Monolithic Headings), Inter (Body), JetBrains Mono (Code/Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/pixls-brandmark.svg">
+</head>
+<body id="top">
+
+  <!-- =======================================================================
+       STICKY NAVBAR
+       ======================================================================= -->
+  <nav class="site-navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-wrapper">
+      <a href="#top" class="nav-brand" aria-label="PIXLS Home">
+        <img src="assets/img/pixls-brandmark.svg" alt="PIXLS Project Logo" class="nav-brand-mark">
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <ul class="nav-menu">
+        {% for item in site.nav %}
+        <li><a href="{{ item.href }}" class="nav-link">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <div class="nav-actions">
+        <a href="{{ site.github_button.href }}" target="_blank" rel="noopener noreferrer" class="btn-pill" title="{{ site.github_button.title }}">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          <span>{{ site.github_button.label }}</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =======================================================================
+       HERO SECTION
+       ======================================================================= -->
+  <header class="hero-section" id="hero">
+    <div class="container hero-content">
+      <div class="hero-text-col">
+        <div class="hero-eyebrow">
+          <span class="tag-dfg">{{ hero.eyebrow.dfg_tag }}</span>
+          <span class="tag-period">{{ hero.eyebrow.period }}</span>
+          <span class="monolith-label berry">{{ hero.eyebrow.domain_label }}</span>
+        </div>
+
+        <h1 class="hero-title">
+          {{ hero.title_prefix }} <span class="highlight-teal">{{ hero.title_highlight }}</span> {{ hero.title_suffix }}
+        </h1>
+
+        <p class="hero-subtitle">
+          {{ hero.subtitle | md_inline }}
+        </p>
+
+        <div class="hero-cta">
+          {% for btn in hero.cta_buttons %}
+          <a href="{{ btn.href }}" class="btn-solid-monolith{% if btn.style != 'teal' %} {{ btn.style }}{% endif %}">
+            <span>{{ btn.label }}</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          {% endfor %}
+        </div>
+
+        <div class="hero-metrics-bar">
+          {% for metric in hero.metrics %}
+          <div class="metric-item">
+            <span class="metric-num{% if metric.color != 'teal' %} {{ metric.color }}{% endif %}">{{ metric.value }}</span>
+            <span class="metric-desc">{{ metric.description | md_inline }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Right Visual Feature Card Stack -->
+      <div class="hero-card-stack">
+        {% for card in hero.cards %}
+        <div class="hero-box {{ card.variant }}"{% if card.variant == 'gold-box' %} style="background: var(--color-gold-light); border-color: var(--color-gold-border); border-left: 5px solid var(--color-gold);"{% endif %}>
+          <div class="hero-box-header">
+            <span class="monolith-label{% if card.badge_color != 'teal' %} {{ card.badge_color }}{% endif %}">{{ card.badge }}</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-{% if card.badge_color == 'teal' %}primary{% else %}{{ card.badge_color }}{% endif %}); font-weight: 700;">{{ card.meta }}</span>
+          </div>
+          <h2 class="hero-box-title">{{ card.title }}</h2>
+          <p>{{ card.body | md_inline }}</p>
+          {% if card.links %}
+          <div style="margin-top: 0.85rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            {% for link in card.links %}
+            <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="pub-link-btn" style="background: white; border-color: var(--color-berry-border); color: var(--color-berry);">
+              {{ link.label }}
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       ABOUT / SCOPE & MOTIVATION SECTION
+       ======================================================================= -->
+  <section id="about">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header">{{ about.heading }}</h2>
+        <p class="section-lead">{{ about.lead }}</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3.5rem;">
+        <div class="about-challenge-col">
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.75rem;">
+            {{ about.challenge_title }}
+          </h3>
+          {{ about.challenge_html }}
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--color-berry); margin-bottom: 0.75rem;">
+            {{ about.solution_title }}
+          </h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 1rem; line-height: 1.7;">
+            {{ about.solution_intro | md_inline }}
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; color: var(--color-text-main); font-size: 0.95rem;">
+            {% for pt in about.solution_points %}
+            <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+              <span style="color: var(--color-{% if pt.color == 'teal' %}primary{% else %}{{ pt.color }}{% endif %}); font-weight: bold;">✓</span>
+              <span>{{ pt.text | md_inline }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Architecture Flow Diagram Display -->
+      <div class="diagram-wrapper">
+        <h3 class="monolith-header berry" style="font-size: 1.15rem; margin-bottom: 1.25rem;">{{ about.diagram.heading }}</h3>
+        <img src="{{ about.diagram.image }}" alt="{{ about.diagram.alt }}" style="width: 100%;">
+        <p class="diagram-caption">{{ about.diagram.caption | md_inline }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       RESEARCH PILLARS SECTION
+       ======================================================================= -->
+  <section class="section-alt" id="pillars">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header gold">{{ pillars.heading }}</h2>
+        <p class="section-lead">{{ pillars.lead }}</p>
+      </div>
+
+      <div class="pillars-grid">
+        {% for pillar in pillars.pillars %}
+        <div class="pillar-card{% if pillar.card_color %} {{ pillar.card_color }}{% endif %}">
+          <div class="pillar-card-top {{ pillar.header_color }}">
+            <span class="pillar-card-title">{{ pillar.title }}</span>
+            <span class="pillar-step-code">{{ pillar.timeframe }}</span>
+          </div>
+          <div class="pillar-card-body">
+            <p>{{ pillar.description | md_inline }}</p>
+            <ul class="pillar-features-list">
+              {% for feat in pillar.features %}
+              <li>{{ feat | md_inline }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SOFTWARE & TOOLS SPOTLIGHT (CAROUSEL WINDOW)
+       ======================================================================= -->
+  <section id="tools">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header berry">{{ tools.heading }}</h2>
+        <p class="section-lead">{{ tools.lead }}</p>
+      </div>
+
+      <div class="software-carousel-window">
+        <!-- Titlebar -->
+        <div class="carousel-window-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <span class="window-title">{{ tools.window_title }}</span>
+          <div class="window-controls-nav">
+            <button class="carousel-nav-btn" onclick="prevSoftwareSlide()" aria-label="Previous tool">&lsaquo;</button>
+            <span class="carousel-indicator-text">1 / {{ tools.tools | length }}</span>
+            <button class="carousel-nav-btn" onclick="nextSoftwareSlide()" aria-label="Next tool">&rsaquo;</button>
+          </div>
+        </div>
+
+        <!-- Tool Selection Tabs -->
+        <div class="software-tabs-bar">
+          {% for tool in tools.tools %}
+          <button class="software-tab-btn{% if loop.first %} active{% endif %}" onclick="switchSoftwareTab({{ loop.index0 }})">
+            <span>{{ tool.tab_label }}</span>
+            <span class="software-tab-badge">{{ tool.tab_badge }}</span>
+          </button>
+          {% endfor %}
+        </div>
+
+        <!-- Carousel Slides -->
+        {% for tool in tools.tools %}
+        <div class="software-carousel-slide{% if loop.first %} active{% endif %}" id="slide-tool-{{ loop.index }}">
+          <div class="software-slide-content">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+              <span class="monolith-label{% if tool.badge_color != 'teal' %} {{ tool.badge_color }}{% endif %}">{{ tool.badge }}</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-{% if tool.badge_color == 'teal' %}primary{% else %}{{ tool.badge_color }}{% endif %}-dark); font-weight: 700;">{{ tool.meta }}</span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin: 0.25rem 0 0.85rem; color: var(--color-text-main);">
+              {{ tool.title }}
+            </h3>
+            <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              {{ tool.description | md_inline }}
+            </p>
+
+            <div class="software-feature-pills">
+              {% for feat in tool.features %}
+              {% set col_key = 'primary' if feat.color == 'teal' else feat.color %}
+              <div class="software-feature-pill" style="border-left: 3px solid var(--color-{{ col_key }});">
+                <strong style="color: var(--color-{{ col_key }}-text);">{{ feat.title }}</strong>
+                <span>{{ feat.text }}</span>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="software-links">
+              {% for link in tool.links %}
+                {% if link.style == 'solid-berry' %}
+                <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith berry" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">{{ link.label }}</a>
+                {% elif link.style == 'solid-gold' %}
+                <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith gold" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">{{ link.label }}</a>
+                {% elif link.style == 'solid-teal' %}
+                <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="btn-solid-monolith" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">{{ link.label }}</a>
+                {% else %}
+                <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="btn-pill" style="font-size: 0.85rem;">{{ link.label }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="software-slide-code">
+            <div>
+              <div class="code-header-bar">
+                <span class="code-title">{{ tool.code_title }}</span>
+                <button class="copy-btn" onclick="copySnippet('codeSnippet{{ loop.index }}', this)">Copy Code</button>
+              </div>
+              <div class="code-body">
+<pre id="codeSnippet{{ loop.index }}">{{ tool.code | highlight_code(tool.code_lang) }}</pre>
+              </div>
+            </div>
+
+            <div class="install-callout">
+              <span class="install-command" id="pipInstallText{{ loop.index }}">{{ tool.install_command }}</span>
+              <button class="copy-btn" onclick="copySnippet('pipInstallText{{ loop.index }}', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+        <!-- Carousel Bottom Navigation Dots -->
+        <div class="carousel-dots-bottom">
+          {% for tool in tools.tools %}
+          <button class="carousel-dot{% if loop.first %} active{% endif %}" onclick="switchSoftwareTab({{ loop.index0 }})" aria-label="Slide {{ loop.index }}"></button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       PUBLICATIONS & DISSEMINATION SECTION (CHRONOLOGICAL)
+       ======================================================================= -->
+  <section class="section-alt" id="publications">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header">{{ publications.heading }}</h2>
+        <p class="section-lead">{{ publications.lead }}</p>
+      </div>
+
+      <!-- Interactive Topic Filter -->
+      <div class="filter-bar">
+        {% for f in publications.filters %}
+        <button class="filter-btn{% if loop.first %} active{% endif %}" data-filter="{{ f.key }}">{{ f.label }}</button>
+        {% endfor %}
+      </div>
+
+      <div class="publications-list">
+        {% for pub in publications.publications %}
+        <article class="pub-card {{ pub.tier }}" data-category="{{ pub.category }}">
+          <div class="pub-meta-top">
+            {% if pub.badge_style == 'gold' %}
+            <span class="pub-badge" style="background-color: var(--color-gold-light); color: var(--color-gold-text); border: 1px solid var(--color-gold-border);">{{ pub.badge }}</span>
+            {% elif pub.badge_style == 'neutral' %}
+            <span class="pub-badge" style="background-color: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0;">{{ pub.badge }}</span>
+            {% else %}
+            <span class="pub-badge {{ pub.badge_style }}">{{ pub.badge }}</span>
+            {% endif %}
+            <span class="pub-year">{{ pub.display_date }}</span>
+            {% if pub.tag %}
+            <span class="monolith-label {{ pub.tag_color }}" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">{{ pub.tag }}</span>
+            {% endif %}
+          </div>
+          <h3 class="pub-title">{{ pub.title }}</h3>
+          <p class="pub-authors">{{ pub.authors }}</p>
+          <p class="pub-venue">{{ pub.venue | md_inline }}</p>
+          <div class="pub-summary">{{ pub.summary | md_inline }}</div>
+          <div class="pub-actions">
+            {% for link in pub.links %}
+            <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="pub-link-btn{% if link.style %} {{ link.style }}{% endif %}">
+              <span>{{ link.label }}</span>
+            </a>
+            {% endfor %}
+            <button class="pub-link-btn" onclick="toggleBibtex('{{ pub.id }}', this)" style="cursor: pointer; background: white;">
+              BibTeX
+            </button>
+          </div>
+          <div id="{{ pub.id }}" class="bibtex-box">{{ pub.bibtex | trim }}</div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       PROJECT UPDATES & BLOG SECTION
+       ======================================================================= -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header">Project Updates &amp; Blog</h2>
+        <p class="section-lead">
+          Chronological dispatches, publications, tool releases, and milestone achievements from the PIXLS research team.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+        {% for post in blog_posts %}
+        <article class="blog-card {{ post.card_style }}">
+          <div class="blog-meta">
+            <span class="monolith-label{% if post.tag_color != 'teal' %} {{ post.tag_color }}{% endif %}" style="font-size: 0.72rem;">{{ post.tag }}</span>
+            <span class="blog-date">{{ post.display_date }}</span>
+          </div>
+          <h3 class="blog-title">{{ post.title }}</h3>
+          <p class="blog-excerpt">{{ post.excerpt | md_inline }}</p>
+          <div id="{{ post.id }}" class="blog-full-content">
+            {{ post.body_html }}
+          </div>
+          <div class="blog-actions">
+            <button class="btn-read-more" onclick="toggleBlog('{{ post.id }}', this)">Read Full Post &rarr;</button>
+            {% if post.links %}
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+              {% for link in post.links %}
+              <a href="{{ link.href }}"{% if link.href.startswith('http') %} target="_blank" rel="noopener noreferrer"{% endif %} class="pub-link-btn{% if link.style %} {{ link.style }}{% endif %}" style="font-size: 0.75rem;">
+                <span>{{ link.label }}</span>
+              </a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       TEAM & INSTITUTIONS SECTION
+       ======================================================================= -->
+  <section class="section-alt" id="team">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="monolith-header">{{ team.heading }}</h2>
+        <p class="section-lead">{{ team.lead }}</p>
+      </div>
+
+      <div class="team-grid">
+        {% for inst in team.institutes %}
+        <div class="institute-card">
+          <div class="inst-header {{ inst.header_class }}">
+            <div>
+              <h3 class="inst-title">{{ inst.name }}</h3>
+              <p class="inst-subtitle">{{ inst.subtitle }}</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              {% for logo in inst.logos %}
+              <img src="{{ logo.src }}" alt="{{ logo.alt }}" style="height: 38px; width: auto; background: white; padding: 2px 6px; border-radius: 4px;">
+              {% endfor %}
+            </div>
+          </div>
+          <div class="inst-body">
+            <div style="background: var(--color-surface-subtle); padding: 0.65rem 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--color-text-main);">{{ inst.portal_label }}</span>
+              <div style="display: flex; gap: 0.4rem;">
+                {% for portal in inst.portals %}
+                <a href="{{ portal.href }}" target="_blank" rel="noopener noreferrer" class="link-tag{% if portal.style == 'gold' %} gold{% endif %}" style="font-weight: 700;">{{ portal.label }}</a>
+                {% endfor %}
+              </div>
+            </div>
+
+            {% for member in inst.members %}
+            <div class="person-profile">
+              <h4 class="person-name">{{ member.name }}</h4>
+              <p class="person-title">{{ member.role }}</p>
+              <div class="person-links">
+                {% for link in member.links %}
+                <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="link-tag">{{ link.label }}</a>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       DFG FUNDING & GOVERNANCE
+       ======================================================================= -->
+  <section id="funding">
+    <div class="container">
+      <div class="dfg-grant-box">
+        <div>
+          <img src="{{ funding.logo }}" alt="{{ funding.logo_alt }}" style="max-width: 260px; margin-bottom: 1rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--color-primary);">
+            {{ funding.title }}
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin-top: 0.5rem;">
+            {{ funding.description | md_inline }}
+          </p>
+        </div>
+
+        <div>
+          <table class="dfg-details-table">
+            <tbody>
+              {% for row in funding.details %}
+              <tr>
+                <td>{{ row.label }}</td>
+                <td>{{ row.value | md_inline }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       FOOTER
+       ======================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-title">{{ site.footer.brand_title }}</div>
+          <p>{{ site.footer.brand_description | trim | replace('\n', '<br>') }}</p>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #8ea2a2;">
+            {{ site.footer.grant_line }}
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation &amp; Resources</h4>
+          <ul class="footer-links">
+            {% for link in site.footer.nav_links %}
+            <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Open Repositories &amp; Portals</h4>
+          <ul class="footer-links">
+            {% for link in site.footer.repo_links %}
+            <li><a href="{{ link.href }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>{{ site.footer.copyright }}</div>
+        <div>{{ site.footer.partners_line }}</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Bundle -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

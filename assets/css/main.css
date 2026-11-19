@@ -173,6 +173,16 @@ img, svg {
   margin-top: 0.5rem;
 }
 
+.about-challenge-col p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.about-challenge-col p:last-child {
+  margin-bottom: 0;
+}
+
 /* ==========================================================================
    NAVIGATION BAR
    ========================================================================== */

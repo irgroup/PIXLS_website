@@ -1,0 +1,186 @@
+heading: "Software & Open Source Tools"
+lead: "PIXLS embraces Open Science. Explore our modular open-source software stack for automated acquisition, VLM document extraction, and digital library integration."
+window_title: "PIXLS Software & Infrastructure Ecosystem"
+
+tools:
+  - id: "reanimator-vlm"
+    tab_label: "reanimator-vlm"
+    tab_badge: "PyPI / VLM"
+    badge: "Featured VLM Toolkit"
+    badge_color: "berry"
+    meta: "Python • PyPI"
+    title: "reanimator-vlm"
+    description: >
+      A clean rebuild of the REANIMATOR framework powered by Vision-Language Models (such as `dots.mocr`) and IBM Docling for end-to-end document collection processing, structured multimodal element parsing (tables, figures, formulas), and domain-independent synthetic relevance assessment (UMBRELA).
+    features:
+      - title: "VLM Optical Parsing"
+        color: "berry"
+        text: "High-precision extraction of tables, formulas, and visual figures without legacy OCR errors."
+      - title: "Synthetic Judgments"
+        color: "teal"
+        text: "Automated, reproducible multi-grade relevance labeling for RAG evaluation benchmarks."
+    links:
+      - label: "PyPI Package"
+        href: "https://pypi.org/project/reanimator-vlm/"
+        style: "solid-berry"
+      - label: "GitHub Repository"
+        href: "https://github.com/irgroup/REANIMATOR-VLM"
+        style: "pill"
+      - label: "Technical Docs"
+        href: "https://irgroup.github.io/reanimator-vlm/"
+        style: "pill"
+    code_title: "Python Quickstart"
+    code_lang: "python"
+    code: |
+      from reanimator import (
+          DocumentCollection,
+          MultimodalParser,
+          SyntheticAssessor
+      )
+
+      # 1. Load collection of preprint PDFs
+      collection = DocumentCollection.from_folder("./preprints")
+
+      # 2. Parse multimodal components with VLM
+      parser = MultimodalParser(model="dots.mocr")
+      parsed_docs = parser.parse(
+          collection,
+          extract_tables=True,
+          link_contexts=True
+      )
+
+      # 3. Generate synthetic relevance for RAG
+      assessor = SyntheticAssessor(framework="umbrela")
+      judgments = assessor.evaluate_relevance(
+          query="remdesivir clinical efficacy",
+          elements=parsed_docs.get_tables_and_passages()
+      )
+      print(f"Revitalized {len(judgments)} labeled pairs.")
+    install_command: "pip install reanimator-vlm"
+
+  - id: "pixls-preprints"
+    tab_label: "pixls-preprints"
+    tab_badge: "Harvester"
+    badge: "Continuous Ingestion"
+    badge_color: "teal"
+    meta: "Codeberg • Python"
+    title: "pixls-preprints"
+    description: >
+      Modular Python acquisition and ELT pipeline that continuously monitors and ingests preprints, PDF documents, and structured metadata across 30+ servers (bioRxiv, medRxiv, OSF archives) using asynchronous rate-limited REST queries.
+    features:
+      - title: "30+ Preprint Servers"
+        color: "teal"
+        text: "Continuous harvesting from bioRxiv, medRxiv, OSF preprints, PsyArXiv, and more."
+      - title: "Leaky-Bucket Throttle"
+        color: "gold"
+        text: "Polite, resilient request scheduling with automated staging and version history tracking."
+    links:
+      - label: "View on Codeberg"
+        href: "https://codeberg.org/pixls/pixls-preprints"
+        style: "solid-teal"
+      - label: "ZB MED Infrastructure"
+        href: "https://www.zbmed.de/"
+        style: "pill"
+    code_title: "Harvester Quickstart"
+    code_lang: "bash"
+    code: |
+      # 1. Clone the asynchronous harvester repository
+      git clone https://codeberg.org/pixls/pixls-preprints.git
+      cd pixls-preprints && pip install -r requirements.txt
+
+      # 2. Run continuous ingestion pipeline across bioRxiv & OSF
+      python -m pixls_preprints.harvester \
+        --sources biorxiv,medrxiv,osf \
+        --rate-limit leaky-bucket \
+        --output-dir ./data/staging/ \
+        --track-versions
+
+      # 3. Verify staging metadata and PDFs
+      python -m pixls_preprints.validator --check-staging
+    install_command: "git clone https://codeberg.org/pixls/pixls-preprints.git"
+
+  - id: "livivo-converter"
+    tab_label: "livivo-converter"
+    tab_badge: "LIVIVO Tool"
+    badge: "Schema Mapping"
+    badge_color: "gold"
+    meta: "Codeberg • Python"
+    title: "livivo-converter"
+    description: >
+      Transformation and schema-mapping toolkit that formats heterogeneous preprint metadata and multimodal structures into standardized representations required for indexing within the LIVIVO life science search environment.
+    features:
+      - title: "LIVIVO Schema Harmonization"
+        color: "gold"
+        text: "Transforms diverse preprint schemas into unified ZB MED Knowledge Environment records."
+      - title: "Enriched Embeddings"
+        color: "berry"
+        text: "Generates BERT and biomedical domain embeddings for semantic scholarly discovery."
+    links:
+      - label: "View on Codeberg"
+        href: "https://codeberg.org/pixls/livivo-converter"
+        style: "solid-gold"
+      - label: "LIVIVO Search Portal"
+        href: "https://www.livivo.de/"
+        style: "pill"
+    code_title: "Conversion CLI"
+    code_lang: "bash"
+    code: |
+      # 1. Clone the LIVIVO schema converter repository
+      git clone https://codeberg.org/pixls/livivo-converter.git
+      cd livivo-converter && pip install -r requirements.txt
+
+      # 2. Convert multimodal preprints to LIVIVO ingestion schema
+      python -m livivo_converter.cli \
+        --input-dir ./parsed_preprints/ \
+        --schema zbmed-ke-v2 \
+        --enrich-bert-embeddings \
+        --output ./livivo_ready.jsonl
+
+      # 3. Export indices for ZB MED Knowledge Environment
+      python -m livivo_converter.export --target elasticsearch
+    install_command: "git clone https://codeberg.org/pixls/livivo-converter.git"
+
+  - id: "reanimator-core"
+    tab_label: "Reanimator (SIGIR '25)"
+    tab_badge: "Benchmark"
+    badge: "ACM SIGIR '25"
+    badge_color: "berry"
+    meta: "GitHub • Benchmark"
+    title: "Reanimator (Core Framework)"
+    description: >
+      Original framework repository and TREC-COVID+ evaluation resources for revitalizing retrieval test collections through extracted tables, in-text references, and synthetic relevance judgments accepted at ACM SIGIR 2025 (Padua, Italy).
+    features:
+      - title: "TREC-COVID+ Benchmark"
+        color: "berry"
+        text: "13,858 extracted tables and 175,000+ passages with synthetic relevance labels."
+      - title: "Multimodal RAG Evaluation"
+        color: "teal"
+        text: "Pairwise LLM Elo tournament runner and RAGAS metric comparative ablation scripts."
+    links:
+      - label: "GitHub Repository"
+        href: "https://github.com/irgroup/Reanimator"
+        style: "solid-berry"
+      - label: "SIGIR '25 Preprint"
+        href: "https://arxiv.org/abs/2504.07584"
+        style: "pill"
+      - label: "ACM Digital Library"
+        href: "https://doi.org/10.1145/3726302.3730342"
+        style: "pill"
+    code_title: "Benchmark Runner Quickstart"
+    code_lang: "bash"
+    code: |
+      # 1. Clone the original SIGIR '25 evaluation repository
+      git clone https://github.com/irgroup/Reanimator.git
+      cd Reanimator && pip install -r requirements.txt
+
+      # 2. Run multimodal RAG evaluation on TREC-COVID+
+      python evaluate_rag.py \
+        --benchmark trec-covid-plus \
+        --modalities text,tables,interleaved \
+        --retrievers bm25,cosine \
+        --generator claude-3-5-sonnet \
+        --metrics ragas,elo
+
+      # 3. Output Elo scores and win rates
+      python analyze_elo.py --ratings-file ./results/elo_ratings.json
+    install_command: "git clone https://github.com/irgroup/Reanimator.git"

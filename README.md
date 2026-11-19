@@ -43,21 +43,30 @@ Preprint servers have become vital in modern life sciences communication, offeri
   - *"Revealing the Hidden Success Factors of Scientific Papers: Structural, Linguistic, and Multimodal Dynamics"*
   - Figshare DOI: [`https://doi.org/10.6084/m9.figshare.34912698`](https://doi.org/10.6084/m9.figshare.34912698)
   - Programme: [`https://searchenginesandsociety.net/season-2026/programme/`](https://searchenginesandsociety.net/season-2026/programme/)
-- **ISI 2027 Workshop**:
-  - *"Information Extraction in Practice"* co-organized with ZBW & GESIS at ISI 2027 (Hamburg).
 
 ---
 
-## 💻 Local Preview & Development
+## ✍️ Editing Website Content
 
-The site is built with modern vanilla HTML5, CSS3, and JavaScript with zero external build dependencies:
+All site content is separated by section into plain Markdown and YAML files under `content/` (no HTML styling needed):
+
+- `content/site.yaml` — Navigation, page metadata, and footer links
+- `content/hero.yaml` — Hero title, subtitle, metrics, and feature cards
+- `content/about.md` — Project overview, challenge, solution points, and architecture diagram caption
+- `content/pillars.yaml` — The four research pillars
+- `content/tools.yaml` — Software carousel entries and quickstart code snippets
+- `content/publications.yaml` — Publications list (auto-sorted newest-first by `date`)
+- `content/blog/*.md` — Individual blog posts (auto-sorted newest-first by `date`; add a new `.md` file to publish a post)
+- `content/team.yaml` — Participating institutes and team member profiles
+- `content/funding.yaml` — DFG funding metadata
+
+### Rebuilding & Local Preview
+
+GitHub Actions automatically runs `python3 scripts/build.py` on every push to `main`, so you can edit files directly on GitHub and deploy automatically. To rebuild and preview locally:
 
 ```bash
-# Clone the repository
-git clone https://github.com/irgroup/PIXLS_website.git
-cd PIXLS_website
-
-# Start a local HTTP server
+pip install pyyaml markdown jinja2
+python3 scripts/build.py
 python3 -m http.server 8000
 ```
 

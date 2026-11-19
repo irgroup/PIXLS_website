@@ -1,0 +1,63 @@
+title: "PIXLS | Preprint Information eXtraction for Life Sciences"
+description: "PIXLS is a DFG-funded research project by TH Köln and ZB MED bringing multimodal information extraction, vision-language models, and synthetic relevance assessment to life science preprints."
+keywords: "PIXLS, DFG, Preprint, Information Extraction, Life Sciences, REANIMATOR, VLM, RAG, Multimodal Retrieval, TH Köln, ZB MED"
+url: "https://irgroup.github.io/PIXLS_website/"
+og_description: "DFG-funded project developing multimodal document parsing, synthetic relevance assessment, and generative retrieval for 530,000+ preprints."
+
+nav:
+  - label: "About"
+    href: "#about"
+  - label: "Research"
+    href: "#pillars"
+  - label: "Software & Tools"
+    href: "#tools"
+  - label: "Publications"
+    href: "#publications"
+  - label: "Blog"
+    href: "#blog"
+  - label: "Team & Partners"
+    href: "#team"
+
+github_button:
+  label: "GitHub"
+  href: "https://github.com/irgroup/REANIMATOR-VLM"
+  title: "View REANIMATOR-VLM on GitHub"
+
+footer:
+  brand_title: "PIXLS"
+  brand_description: |
+    Preprint Information eXtraction for Life Sciences.
+    A joint research initiative by TH Köln and ZB MED funded by the Deutsche Forschungsgemeinschaft (DFG).
+  grant_line: "DFG Förderkennzeichen: 492813820 • 2023 – 2027"
+  nav_links:
+    - label: "About the Project"
+      href: "#about"
+    - label: "Research Pillars"
+      href: "#pillars"
+    - label: "Software & Tools"
+      href: "#tools"
+    - label: "Publications"
+      href: "#publications"
+    - label: "Project Updates & Blog"
+      href: "#blog"
+    - label: "Team & Institutes"
+      href: "#team"
+  repo_links:
+    - label: "LIVIVO Life Sciences Portal"
+      href: "https://www.livivo.de/"
+    - label: "reanimator-vlm on PyPI"
+      href: "https://pypi.org/project/reanimator-vlm/"
+    - label: "REANIMATOR-VLM (GitHub)"
+      href: "https://github.com/irgroup/REANIMATOR-VLM"
+    - label: "pixls-preprints (Codeberg)"
+      href: "https://codeberg.org/pixls/pixls-preprints"
+    - label: "livivo-converter (Codeberg)"
+      href: "https://codeberg.org/pixls/livivo-converter"
+    - label: "Original REANIMATOR (SIGIR '25)"
+      href: "https://github.com/irgroup/Reanimator"
+    - label: "Website Source (GitHub)"
+      href: "https://github.com/irgroup/PIXLS_website"
+    - label: "DFG GEPRIS Database"
+      href: "https://gepris.dfg.de/gepris/projekt/492813820"
+  copyright: "© 2023–2027 PIXLS Research Project. Licensed under CC-BY 4.0 / MIT."
+  partners_line: "TH Köln (CIR) • ZB MED – Information Centre for Life Sciences • LIVIVO"
